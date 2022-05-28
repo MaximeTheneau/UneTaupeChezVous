@@ -1,0 +1,9 @@
+/** style mobile first **/
+.headerImg{
+  background: #111;
+  height: 50vh;
+}
+
+/**style ordi >640px*/
+  @media screen and (min-width: 640px) {
+  }
