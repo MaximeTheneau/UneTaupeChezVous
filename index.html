@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,77 +13,83 @@
   <script defer src="assets/js/app.js"></script>
   <script defer src="assets/js/components/bulma.js"></script>
   <script defer src="assets/js/components/navbar.js"></script>
-  <script defer src="~bulma-carousel/dist/js/bulma-carousel.min.js"></script>
-
 
 </head>
-<body class="">
+<body >
   <header>
     <!-- Navbar -->
     <div class="headerImg ">
-
     </div>
     <nav class="navbar">
       <div class="navbar-brand">
-        <a class="navbar-item" href="#">
-          <img src="#" alt="Logo Une Taupe Chez Vous" width="112" height="28">
+        <a class="navbar-item"
+          href="#">
+          <img src="#"
+            alt="Logo Une Taupe Chez Vous"
+            width="112"
+            height="28">
         </a>
-        <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+        <div class="navbar-burger"
+          data-target="navbarExampleTransparentExample">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </div>
-    
-      <div id="navbarExampleTransparentExample" class="navbar-menu">
+
+      <div id="navbarExampleTransparentExample"
+        class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="#">
+          <a class="navbar-item"
+            href="#">
             Accueil
           </a>
-          <a class="navbar-item" href="#">
+          <a class="navbar-item"
+            href="#">
             Intervention
           </a>
-          <a class="navbar-item" href="#">
+          <a class="navbar-item"
+            href="#">
             Lieux d'Intervention
           </a>
-          <a class="navbar-item" href="#">
+          <a class="navbar-item"
+            href="#">
             Contact
           </a>
         </div>
-    
+
       </div>
     </nav>
-</header>
-<section>
-    <div class="tile is-parent">
-        <article class="tile is-child notification is-info">
-          <p class="title">Middle tile</p>
-          <p class="subtitle">With an image</p>
-            <img src="https://bulma.io/images/placeholders/640x480.png">
-        </article>
-      </div>
-</section>	<section class="section">
-    <div class="container">
-        <!-- Start Carousel -->
-        <div id="carousel-demo" class="carousel">
-            <div class="item-1">
-                <img src="https://bulma.io/images/placeholders/640x480.png">
-            </div>
-            <div class="item-2">
-                <img src="https://bulma.io/images/placeholders/640x480.png">
-            </div>
-            <div class="item-3">
-                <img src="https://bulma.io/images/placeholders/640x480.png">
-            </div>
+  </header>
+  <main>
+    <section >
+      <div class="fixed-relative p-b-30">
+        <figure class="image ">
+          <img src="https://bulma.io/images/placeholders/480x480.png">
+        </figure>
+        <div class="content fixed-absolute-top has-background-white">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tempora veritatis sunt consequatur
+            voluptates aperiam distinctio, adipisci, quo ab neque asperiores expedita repellat eveniet. Quos assumenda
+            accusamus nostrum doloremque alias?</p>
         </div>
-        <!-- End Carousel -->
-    </div>
-</section>
-<script>
-    bulmaCarousel.attach('#carousel-demo', {
-        slidesToScroll: 1,
-        slidesToShow: 4
-    });
-    </script>
+      </div>
+    </section>
+    <section>
+      <div class="card">
+        <figure class="image">
+          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+        </figure>
+        <div class="content">
+          <p> Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at
+            eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras
+            mattis consectetur purus sit amet fermentum.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="map">
+
+    </section>
+  </main>
 </body>
 </html>
