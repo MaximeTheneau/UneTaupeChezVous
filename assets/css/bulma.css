@@ -1,5 +1,12 @@
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
+.mt-30 {
+  margin-top: 35%;
+}
+.none{
+  display: none;
+}
+
 .button, .input, .textarea, .select select, .file-cta,
 .file-name, .pagination-previous,
 .pagination-next,
