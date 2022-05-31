@@ -1,9 +1,7 @@
 # Une Taupe Chez Vous Website
-Une Taupe Chez Vous is an Website Project.
+en cours...
 
-### [Docs in English](http://test.fr)
-
-## [Demo](http://test.fr) 
+## [Demo]([http://test.fr](https://maximethe.github.io/UneTaupeChezVous/)) 
 
 ### Responsives
 
