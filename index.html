@@ -87,8 +87,51 @@
         </div>
       </div>
     </section>
-    <section id="map">
 
+    <section id="map">
+      <map name="primary">
+        <area shape="circle" coords="75,75,75" href="left.html">
+        <area shape="circle" coords="275,75,75" href="right.html">
+      </map>
+      <img usemap="#primary" src="https://via.placeholder.com/350x150" alt="350 x 150 pic"> 
+    </section>
+
+    <section>
+      <form action="">
+        <div class="select">
+          <select>
+            <option value="0" >----</option>
+            <option value="1" >Devis</option>
+            <option value="2">Message</option>
+          </select>
+        </div>
+        <input class="input" type="text" for="firstname" name="firstname" placeholder="Nom">
+        <input class="input" type="text" for="name" name="name" placeholder="Prenom">
+        <textarea class="textarea" for="firstname" name="firstname" placeholder="message"></textarea>
+        <div class="file has-name is-right">
+          <label class="file-label">
+            <input class="file-input" type="file" name="resume">
+            <span class="file-cta">
+              <span class="file-icon">
+                <i class="fas fa-upload"></i>
+              </span>
+              <span class="file-label">
+                Choose a file…
+              </span>
+            </span>
+            <span class="file-name">
+              Votre fichier
+            </span>
+          </label>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link"></button>
+          </div>
+        </div>
+        
+      </form>
+      <i class="fa-solid fa-paper-plane"></i>
     </section>
   </main>
 </body>
