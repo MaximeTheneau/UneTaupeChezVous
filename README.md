@@ -1,7 +1,7 @@
 # Une Taupe Chez Vous Website
 en cours...
 
-## [Demo]([http://test.fr](https://maximethe.github.io/UneTaupeChezVous/)) 
+## [Demo](https://maximethe.github.io/UneTaupeChezVous/) 
 
 ### Responsives
 
