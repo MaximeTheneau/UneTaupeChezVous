@@ -1,8 +1,14 @@
 /** style mobile first **/
+body{
+  position: relative;
+}
 /* Header */
 .headerImg{
   background: #111;
   height: 50vh;
+}
+.navbar{
+  position:sticky;
 }
 .presentation{
   background: #111;
