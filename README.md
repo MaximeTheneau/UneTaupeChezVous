@@ -9,10 +9,8 @@ Une Taupe Chez Vous utilise la stratégie "Mobile First", avec les media queries
 
 ### Langages utilisés 
 
-- HTML5, CSS3
-- JavaScript,
-- Bulma,
-- Font-awesome.
+- React-Js
+- React-router
 
 ### Wireframe
 
