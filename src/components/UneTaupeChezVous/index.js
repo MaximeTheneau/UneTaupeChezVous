@@ -4,6 +4,8 @@ import Footer from "../Footer";
 import Header from "../Header";
 import IllustrationHome from "./IllustrationHome";
 import Contact from "./Page/Contact";
+import Home from "./Page/Home";
+import Services from "./Page/Services";
 import "./styles.css";
 
 function UneTaupeChezVous() {
@@ -13,8 +15,10 @@ function UneTaupeChezVous() {
       <Header />
       <main className="main">
         <Routes>
-          <Route path="/" element={<h1>Une taupe chez vous</h1>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<h1>404</h1>} />
         </Routes>
       </main>
       <Footer />
