@@ -1,18 +1,24 @@
 // == Import
-import Footer from '../Footer';
-import Header from '../Header';
-import './styles.css';
+import { Route, Routes } from "react-router-dom";
+import Footer from "../Footer";
+import Header from "../Header";
+import IllustrationHome from "./IllustrationHome";
+import Contact from "./Page/Contact";
+import "./styles.css";
 
-// == Composant
 function UneTaupeChezVous() {
   return (
-    <div className="uneTaupeChezVous">
+    <>
+      <IllustrationHome />
       <Header />
       <main className="main">
-        <p>rere</p>
+        <Routes>
+          <Route path="/" element={<h1>Une taupe chez vous</h1>} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 

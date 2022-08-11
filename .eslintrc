@@ -1,6 +1,6 @@
 {
   "extends": "airbnb",
-  "parser": "@babel/eslint-parser",
+  "parser": "babel-eslint",
   "env": {
     "browser": true
   },
@@ -31,11 +31,7 @@
     "react/destructuring-assignment": "warn",
     "react/no-unescaped-entities": "off",
     "react/jsx-props-no-spreading": "off",
-    "react/state-in-constructor": "off",
-    "func-names": "off",
-    "object-shorthand": "off",
-    "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/state-in-constructor": "off"
   },
   "settings": {
     "import/resolver": {
