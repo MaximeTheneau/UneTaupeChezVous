@@ -16,11 +16,19 @@ function Header() {
             className="header__button"
             onClick={() => dispatch(toogleNavbar())}
           >
-            xx
+            x
           </button>
         ) : (
           <nav className="navbar">
             <ul>
+              <li className="navbar-item">
+                <button
+                  className="header__button"
+                  onClick={() => dispatch(toogleNavbar())}
+                >
+                  f
+                </button>
+              </li>
               <li className="navbar-item">
                 <NavLink to="/">Accueil</NavLink>
               </li>
@@ -29,14 +37,6 @@ function Header() {
               </li>
               <li className="navbar-item">
                 <NavLink to="/services">Services</NavLink>
-              </li>
-              <li className="navbar-item">
-                <button
-                  className="header__button"
-                  onClick={() => dispatch(toogleNavbar())}
-                >
-                  x
-                </button>
               </li>
             </ul>
           </nav>

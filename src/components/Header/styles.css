@@ -1,0 +1,6 @@
+.header{
+    position: sticky;
+    top: 0;
+    background: #555;
+    width: 100% !important;
+}

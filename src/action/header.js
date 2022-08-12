@@ -1,4 +1,4 @@
-export const TOGGLE_NAVBAR  = 'TOGGLE_NAVBAR';
+export const TOGGLE_NAVBAR = "TOGGLE_NAVBAR";
 
 export function toogleNavbar() {
   return {
