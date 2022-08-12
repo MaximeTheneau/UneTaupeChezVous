@@ -1,12 +1,16 @@
-import { SHOW_SIDEBAR, HIDE_SIDEBAR } from '../action/header';
+import { SHOW_SIDEBAR, HIDE_SIDEBAR, TOGGLE_NAVBAR } from "../action/header";
 
 export const initialState = {
-  isOpen: false,
+  toogleNavbar: true,
 };
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-
+    case TOGGLE_NAVBAR:
+      return {
+        ...state,
+        toogleNavbar: !state.toogleNavbar,
+      };
     default:
       return state;
   }
