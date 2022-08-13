@@ -5,8 +5,13 @@
   src: url('../assets/fonts/Comfortaa-Regular.ttf');
 }
 
-body {
+main.main {
   margin: auto;
   width: 90%;
   font-family: 'general', sans-serif;
+}
+body{
+  min-height: 100vh;
+
+  min-height: 100%;
 }
