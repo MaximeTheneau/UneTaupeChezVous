@@ -1,10 +1,12 @@
 // == Import
+import Illustration from "../../../../assets/svg/illustraion-taupe-jardin.svg";
 import "./styles.css";
 
 // == Composant
 function Home() {
   return (
     <>
+      <Illustration />
       <h1>Home</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam commodi debitis deleniti cumque nostrum, rerum nobis molestiae vitae atque temporibus exercitationem illum quam omnis mollitia nisi dolor a aut laborum!</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam commodi debitis deleniti cumque nostrum, rerum nobis molestiae vitae atque temporibus exercitationem illum quam omnis mollitia nisi dolor a aut laborum!</p>

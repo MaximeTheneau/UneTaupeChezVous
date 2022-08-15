@@ -5,6 +5,7 @@
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
     "lint": "eslint ./src/** --no-error-on-unmatched-pattern",
     "lint:fix": "eslint --fix ./src/** --no-error-on-unmatched-pattern",
+    "build:svg": "svgr svg/ -d ./src/assets/svg",
     "clean": "rm -rf dist",
     "clean:all": "rm -rf dist node_modules yarn.lock package-lock.json"
   },
@@ -14,6 +15,8 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.18.0",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
+    "@svgr/cli": "^6.3.1",
+    "@svgr/webpack": "^6.3.1",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.5",
     "babel-plugin-react-require": "^3.1.3",
