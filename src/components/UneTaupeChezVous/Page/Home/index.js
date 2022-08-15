@@ -13,8 +13,7 @@ import MapSvg from "../../../../assets/svg/carte-ile-de-france.svg";
 import Taupe from "../../../../assets/svg/taupe.svg";
 import Fouine from "../../../../assets/svg/fouine.svg";
 import Ragondin from "../../../../assets/svg/ragondin.svg";
-
-
+import Logo from "../../../../assets/svg/logo-une-taupe-chez-vous.svg";
 
 
 // == Composant
@@ -30,6 +29,7 @@ function Home() {
   return (
     <>
       <Illustration />
+      <Logo alt="logo une Taupe Chez Vous" />
       <h1 className="home-title">Une Taupe Chez vous</h1>
       <h2 className="home-subtitle">Artisans Taupiers piégeurs</h2>
       <p className="home-paragrah">
@@ -72,43 +72,47 @@ function Home() {
       {/*--home-list-services--*/}
       <div className="home-list-services">
         <h2 className="home-list-services_title">Nos services</h2>
-        <div className="home-list-services_list">
+        <div className="home-cards">
           {/*--home-service--*/}
-          <div className="home-list-services_list_item">
+          <div className="home-card">
             <Link to="/services/nuisibles/taupe">
-              <h3 className="home-list-services_list_title">Taupes</h3>
               <div className="home-list-services_list_img">
                 <Taupe />
               </div>
+              <h3 className="home-list-services_list_title">Taupes</h3>
             </Link>
           </div>
           {/*--home-service--*/}
-          <div className="home-list-services_list_item">
-          <Link to="/services/nuisibles/fouine">
-              <h3 className="home-list-services_list_title">Fouines</h3>
+          <div className="home-card">
+            <Link to="/services/nuisibles/fouine">
               <div className="home-list-services_list_img">
                 <Fouine />
               </div>
+              <h3 className="home-list-services_list_title">Fouines</h3>
             </Link>
           </div>
-          <div className="home-list-services_list_item">
-          <Link to="/services/nuisibles/ragondin">
-              <h3 className="home-list-services_list_title">Ragondins</h3>
+          {/*--home-service--*/}
+          <div className="home-card">
+            <Link to="/services/nuisibles/ragondin">
               <div className="home-list-services_list_img">
-                <Taupe />
+                <Ragondin />
               </div>
+              <h3 className="home-list-services_list_title">Ragondins</h3>
           </Link>
           </div>
         </div>
       </div>
       {/*--home-Map--*/}
+      <h3>Interventions en Yvelynes (78)</h3>
       <div className="home-map">
+        <div className="home-map_description">
+          <p>
+            Pour tous demande de devis ou demande de renseignement
+            <Link to="/contact"> contactez-nous</Link>
+          </p>
+        </div>
         <div className="home-map_img">
           <MapSvg />
-        </div>
-        <div className="home-map_description">
-          <h3>Interventions en Yvelynes (78)</h3>
-          <p>Pour tous demande de devis ou demande de renseignement <Link to="/contact">contactez-nous</Link></p>
         </div>
       </div>
     </>

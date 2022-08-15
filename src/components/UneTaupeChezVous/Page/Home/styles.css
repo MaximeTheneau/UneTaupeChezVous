@@ -1,9 +1,39 @@
-.app {
-  width: 500px;
-  margin: 1em auto;
-  text-align: center;
+.home{
+  &-map_img {
+    width: 31%;
+    justify-content: space-around
+  }
+  &-card svg{
+    width: 100%;
+    height: 20rem;
+  }
+  &-map {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+}
+svg#logo-une-taupe-chez-vous_svg__Calque_1 {
+  width: 5rem;
 }
 
-.app img {
-  max-width: 150px;
+@media screen and (min-width: 720px){
+  .home{
+    &-cards{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    &-card{
+        width: 50%;
+    }
+  }
+}
+@media screen and (min-width: 1020px){
+  .home-card{
+      width: 30%;
+  }
 }

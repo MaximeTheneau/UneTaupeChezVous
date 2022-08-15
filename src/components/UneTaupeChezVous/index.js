@@ -15,7 +15,7 @@ function UneTaupeChezVous() {
       <main className="main">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/services/nuisibles/:slug" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/mentions-legal" element={<MentionsLegal />} />
           <Route path="*" element={<h1>404</h1>} />
