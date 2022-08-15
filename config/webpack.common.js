@@ -45,6 +45,7 @@ module.exports = {
       template: paths.assets + '/index.html',
     }),
   ],
+  
 
   module: {
     rules: [
@@ -63,6 +64,11 @@ module.exports = {
       },
       // Images
       {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ['@svgr/webpack'],
+      },
+      {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
         type: 'asset/resource',
         generator: {
@@ -71,7 +77,7 @@ module.exports = {
       },
       // Fonts and SVGs
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        test: /\.(woff(2)?|eot|ttf|otf|)$/,
         type: 'asset',
         generator: {
           filename: 'fonts/[hash][ext][query]'
