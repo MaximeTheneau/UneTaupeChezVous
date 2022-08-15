@@ -1,7 +1,9 @@
-import { SHOW_SIDEBAR, HIDE_SIDEBAR, TOGGLE_NAVBAR } from "../action/header";
+import { TOGGLE_NAVBAR_SUBTITLE, TOGGLE_NAVBAR } from "../action/header";
 
 export const initialState = {
   toogleNavbar: true,
+  toogleNavbarSubtitle: true,
+
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -10,6 +12,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         toogleNavbar: !state.toogleNavbar,
+      };
+    case TOGGLE_NAVBAR_SUBTITLE:
+      return {
+        ...state,
+        toogleNavbarSubtitle: !state.toogleNavbarSubtitle,
       };
     default:
       return state;

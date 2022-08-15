@@ -3,4 +3,19 @@
     top: 0;
     background: #555;
     width: 100% !important;
+    &-logo {
+        width: 10%;
+    }
+    &-navbar-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+    
+}
+.navbar-item_subtittle {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
 }
