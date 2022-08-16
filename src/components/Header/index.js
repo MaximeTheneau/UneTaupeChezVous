@@ -72,7 +72,7 @@ function Header() {
                     </li>
                     <li className="navbar-subitem-item">
                       <NavLink
-                        to="/services/nuisibles/fouines"
+                        to="/services/nuisibles/fouine"
                         onClick={handleSubtitle}
                       >
                         Fouine

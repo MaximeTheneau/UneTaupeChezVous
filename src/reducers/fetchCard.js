@@ -1,7 +1,7 @@
 import { FETCH_CARD } from "../action/card";
 
 export const initialState = {
-  home: [],
+  list: [],
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -9,7 +9,7 @@ const reducer = (state = initialState, action = {}) => {
     case FETCH_CARD:
       return {
         ...state,
-        home: action.home,
+        list: action.list,
       };
     default:
       return state;
