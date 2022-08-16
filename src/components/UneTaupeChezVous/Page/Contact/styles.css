@@ -1,9 +1,17 @@
-.app {
-  width: 500px;
-  margin: 1em auto;
-  text-align: center;
+.custom-checkbox input[type="checkbox"],
+.custom-checkbox .checked {
+display: none;
 }
 
-.app img {
-  max-width: 150px;
+.custom-checkbox input[type="checkbox"]:checked ~ .checked
+{
+display: inline-block;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .unchecked
+{
+display: none;
+}
+.checkbox_img {
+width: 1.5rem;
 }

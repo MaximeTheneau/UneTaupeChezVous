@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
 import header from "./header";
-import card from "./fetchCard";
+import contact from "./contact";
+
 
 const rootReducer = combineReducers({
   header: header,
-  card: card,
+  contact: contact,
 });
 
 export default rootReducer;

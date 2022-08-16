@@ -1,15 +1,15 @@
-import { FETCH_CARD } from "../action/card";
+import { CONTACT_FORM } from "../action/contact";
 
 export const initialState = {
-  list: [],
+
 };
 
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case FETCH_CARD:
+    case CONTACT_FORM:
       return {
         ...state,
-        list: action.list,
+        [action.field]: action.value,
       };
     default:
       return state;

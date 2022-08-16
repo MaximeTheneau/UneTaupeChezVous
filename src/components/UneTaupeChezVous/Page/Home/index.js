@@ -2,10 +2,6 @@
 import { Link } from "react-router-dom";
 import Illustration from "../../../../assets/svg/illustraion-taupe-jardin.svg";
 import "./styles.css";
-import homeData from "../../../../Data/home";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchCard } from "../../../../action/card";
 import Environment from "../../../../assets/svg/icon-environment.svg";
 import Certified from "../../../../assets/svg/icon-certified.svg";
 import Trap from "../../../../assets/svg/icon-trap.svg";
@@ -15,17 +11,8 @@ import Fouine from "../../../../assets/svg/fouine.svg";
 import Ragondin from "../../../../assets/svg/ragondin.svg";
 import Logo from "../../../../assets/svg/logo-une-taupe-chez-vous.svg";
 
-
 // == Composant
 function Home() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchCard(homeData));
-  }, [dispatch]);
-  const homeList = useSelector((state) => state.card.home);
-  // console.log(imgcard);
-  // const homeListArray = Array(homeList);
-
   return (
     <>
       <Illustration />
