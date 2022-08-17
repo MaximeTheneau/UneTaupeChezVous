@@ -22,10 +22,10 @@ function Contact() {
     console.log(evt.target);
     emailjs
       .sendForm(
-        "service_948w3jq",
-        "template_83yo2gf",
+        "service_{ID_SERVICE}",
+        "template_{TEMPLATE_SERVICE"},
         evt.target,
-        "1O8Ob4TeUeGNU_xaz"
+        "{KEY_PUBLIC}"
       )
     .then((result) => {
         console.log(result.text);
