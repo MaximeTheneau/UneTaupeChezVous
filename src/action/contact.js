@@ -7,10 +7,3 @@ export function contactForm(value, field) {
     field: field,
   };
 }
-export const POST_CONTACT = "POST_CONTACT";
-
-export function postContact() {
-  return {
-    type: POST_CONTACT,
-  };
-}

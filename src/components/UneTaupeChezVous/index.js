@@ -11,8 +11,13 @@ import Services from "./Page/Services";
 import "./styles.css";
 import Ragondin from "./Page/Services/Ragondin";
 import Fouine from "./Page/Services/Fouine";
+import ModalBox from "../ModalBox";
+import { useDispatch, useSelector } from "react-redux";
 
 function UneTaupeChezVous() {
+  const dispatch = useDispatch();
+  const toggleModal = useSelector((state) => state.modalBox.toggleModal);
+  console.log(toggleModal);
   return (
     <>
       <Header />
@@ -27,6 +32,7 @@ function UneTaupeChezVous() {
           <Route path="/mentions-legal" element={<MentionsLegal />} />
           <Route path="*" element={<h1>404</h1>} />
         </Routes>
+        {toggleModal ? <ModalBox /> : null}
       </main>
       <Footer />
     </>
