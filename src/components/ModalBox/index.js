@@ -1,8 +1,9 @@
 // == Import
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import { toggleModal } from "../../action/modalBox";
+import CardImg from "../../assets/svg/card-illustration.svg";
 import "./styles.css";
 
 // == Composant
@@ -10,20 +11,32 @@ function ModalBox() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // const toggleModal = useSelector((state) => state.modalBox.toggleModal);
-
   useEffect(() => {
     setTimeout(() => {
       console.log("yep");
       dispatch(toggleModal());
       navigate("/");
-    }, 7000,);
+    }, 70000,);
   }, []);
   return (
     <>
+      <div className="modal-blur"></div>
       <div className="modal">
-        <div className="modal_img">ezzeez</div>
-        <div className="modal_description">ezzee</div>
+        <div className="modal_img">
+          <CardImg />
+        </div>
+        <div className="modal_description">
+          <h2>Bien reçu</h2>
+          <p>On vous répond aux plus vite </p>
+          <Link to="/">
+            <button
+              className="modal_button"
+              onClick={() => dispatch(toggleModal())}
+            >
+              Retour à l'accueil
+            </button>
+          </Link>
+        </div>
       </div>
     </>
   );
