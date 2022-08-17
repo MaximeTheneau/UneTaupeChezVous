@@ -32,7 +32,7 @@ function UneTaupeChezVous() {
           <Route path="/mentions-legal" element={<MentionsLegal />} />
           <Route path="*" element={<h1>404</h1>} />
         </Routes>
-        {toggleModal ? <ModalBox /> : null}
+        {toggleModal ? <ModalBox /> : ""}
       </main>
       <Footer />
     </>

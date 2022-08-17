@@ -16,7 +16,7 @@ function ModalBox() {
       console.log("yep");
       dispatch(toggleModal());
       navigate("/");
-    }, 70000,);
+    }, 7000,);
   }, []);
   return (
     <>

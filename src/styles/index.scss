@@ -9,10 +9,10 @@
 main.main {
   margin: auto;
   width: 90%;
-  font-family: 'general', sans-serif;
   text-align: center;
 }
-body{
+body{  
+  font-family: 'general', sans-serif;
   min-height: 100vh;
   min-height: 100%;
 }
@@ -34,8 +34,43 @@ h3{
 button{
   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
   background: none;
-  margin: 1rem 0;
+  margin: 1rem ;
+  padding: 1rem ;
   border: none;
+  font-family: 'general', sans-serif;
+}
+.rotate-90{
+  transform: rotate(90deg);
+}
+
+input,
+textarea {
+  width: 90%;
+  border-radius: 10px;
+  border: 0.1rem solid vars.$color-primary !important;
+  border-color: none;
+  background-color: none !important;
+  font-size: 1rem;
+  padding: 0.5rem;
+  transition: width 0.5s ease-in-out;
+}
+input:focus,
+textarea:focus,
+input:hover,
+textarea:hover {
+  border: 0.2rem solid vars.$green !important;
+  width: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.header-navbar-item:hover,
+.header-navbar-item_subtitle:hover,
+.header-navbar-subtitle-item:hover{
+  font-size: 2rem;
+  color: vars.$white;
+}
+.active{
+  font-size: 1.5rem;
+  color: vars.$green;
 }

@@ -2,7 +2,7 @@ import { TOGGLE_MODAL } from "../action/modalBox";
 
 
 export const initialState = {
-  toggleModal: true,
+  toggleModal: false,
 };
 
 const reducer = (state = initialState, action = {}) => {

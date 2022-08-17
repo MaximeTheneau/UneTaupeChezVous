@@ -19,10 +19,10 @@ function Footer() {
         <li className="footer-link">
           <NavLink to="/mentions-legal">Mentions-légal</NavLink>
         </li>
-        <li className="footer-link">
-          Site réaliser par <a href="#github">Theneau Maxime</a>
-        </li>
       </ul>
+      <div className="footer-author">
+        Site réaliser par <a href="#github">Theneau Maxime</a>
+      </div>
     </footer>
   );
 }

@@ -12,9 +12,9 @@
     align-items: center;
     justify-content: space-between;
   }
-}
-svg#logo-une-taupe-chez-vous_svg__Calque_1 {
-  width: 5rem;
+  &-logo{
+    width: 10%;
+  }
 }
 
 @media screen and (min-width: 720px){

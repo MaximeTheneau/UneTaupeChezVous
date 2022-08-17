@@ -28,7 +28,7 @@ function Header() {
             </div>
             <div className="header-button_close">
               <button className="" onClick={() => dispatch(toogleNavbar())}>
-                x
+                <i className="icon-navbar" />
               </button>
             </div>
           </div>
@@ -41,28 +41,34 @@ function Header() {
                 </NavLink>
               </div>
               <div className="header-button_close">
-                <button onClick={() => dispatch(toogleNavbar())}>x</button>
+                <button onClick={() => dispatch(toogleNavbar())}>
+                  <i className="icon-x" />
+                </button>
               </div>
             </div>
-            <ul>
-              <li className="navbar-item">
+            <ul className="header-navbar">
+              <li className="header-navbar-item">
                 <NavLink to="/" onClick={() => dispatch(toogleNavbar())}>
                   Accueil
                 </NavLink>
               </li>
-              <li className="navbar-item">
+              <li>
                 <div
-                  className="navbar-item_subtittle"
+                  className="header-navbar-item_subtitle"
                   onClick={() => dispatch(toogleNavbarSubtitle())}
                 >
                   Services
-                  <i className="icon"> dsds </i>
+                  {toggleNavSubtitle ? (
+                    <i className="icon-angle" />
+                  ) : (
+                    <i className="icon-angle rotate-90" />
+                  )}
                 </div>
                 {toggleNavSubtitle ? (
                   ""
                 ) : (
-                  <ul className="navbar-subitem">
-                    <li className="navbar-subitem-item">
+                  <ul className="header-navbar-subitem">
+                    <li className="header-navbar-subtitle-item">
                       <NavLink
                         to="/services/nuisibles/taupe"
                         onClick={handleSubtitle}
@@ -70,7 +76,7 @@ function Header() {
                         Taupe
                       </NavLink>
                     </li>
-                    <li className="navbar-subitem-item">
+                    <li className="header-navbar-subtitle-item">
                       <NavLink
                         to="/services/nuisibles/fouine"
                         onClick={handleSubtitle}
@@ -78,7 +84,7 @@ function Header() {
                         Fouine
                       </NavLink>
                     </li>
-                    <li className="navbar-subitem-item">
+                    <li className="header-navbar-subtitle-item">
                       <NavLink
                         to="/services/nuisibles/Ragondin"
                         onClick={handleSubtitle}
@@ -89,7 +95,7 @@ function Header() {
                   </ul>
                 )}
               </li>
-              <li className="navbar-item">
+              <li className="header-navbar-item">
                 <NavLink to="/contact" onClick={() => dispatch(toogleNavbar())}>
                   Contact
                 </NavLink>

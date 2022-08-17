@@ -1,7 +1,7 @@
 // == Import
-import { Link } from "react-router-dom";
-import Illustration from "../../../../assets/svg/illustraion-taupe-jardin.svg";
 import "./styles.css";
+import { Link } from "react-router-dom";
+import Illustration from "../../../../assets/svg/illustration-jardin-taupe.svg";
 import Environment from "../../../../assets/svg/icon-environment.svg";
 import Certified from "../../../../assets/svg/icon-certified.svg";
 import Trap from "../../../../assets/svg/icon-trap.svg";
@@ -16,7 +16,7 @@ function Home() {
   return (
     <>
       <Illustration />
-      <Logo alt="logo une Taupe Chez Vous" />
+      <Logo alt="logo une Taupe Chez Vous" className="home-logo"/>
       <h1 className="home-title">Une Taupe Chez vous</h1>
       <h2 className="home-subtitle">Artisans Taupiers piégeurs</h2>
       <p className="home-paragrah">
