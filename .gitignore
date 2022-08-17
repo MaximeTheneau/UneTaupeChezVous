@@ -9,4 +9,4 @@ yarn-error.log
 !.env*.example
 
 .vscode/
-src/components/UneTaupeChezVous/Contact/index.js
+src/components/UneTaupeChezVous/Page/Contact/index.js
