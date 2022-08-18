@@ -1,29 +1,37 @@
 // == Import
+import { MetaTags } from "react-meta-tags";
 import "./styles.css";
 
 // == Composant
 function MentionsLegal() {
   return (
-    <>
+    <div className="mentions">
+      <MetaTags>
+        <title>Mention légal</title>
+        <meta
+          name="description"
+          content="Une Taupe Chez Vous, 71 rue Marie Curie, 27780 Garrennes Sur Eure, 0232264958, N° SIRET 39338032400029"
+        />
+      </MetaTags>
       <h1>Mentions-légal</h1>
-      <h2>Une Taupe Chez Vous</h2>
       <ul>
         <li className="list-mentions">
           <i className="icon-location"/>
-          <p>71 RUE MARIE CURIE 27780 GARENNES SUR EURE FRANCE</p>
-        </li>
-        <li className="list-mentions">
-          <i className="icon-phone"/> 
-          <p>0964259779</p>
-        </li>
-        <li className="list-mentions">
           <p>
-            N° SIRET :<br />
-            39338032400029
+            Une Taupe Chez Vous,
+            <br />
+            71 rue Marie Curie,
+            <br />
+            27780 Garenne Sur Eure
           </p>
         </li>
-        <li className="list-mentions"></li>
-        <i className="icon-indicator"/>
+        <li className="list-mentions">
+          <i className="icon-phone" />
+          <p>+33 2 32 26 49 58</p>
+        </li>
+        <li className="list-mentions">
+          <p>N° SIRET : 39338032400029</p>
+        </li>
       </ul>
       <h2>Cookies</h2>
       <p>Cookies strictement nécessaires à l’utilisation du service demandé.</p>
@@ -64,7 +72,7 @@ function MentionsLegal() {
           </p>
         </li>
       </ol>
-    </>
+    </div>
   );
 }
 

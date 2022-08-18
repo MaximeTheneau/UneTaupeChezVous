@@ -70,7 +70,10 @@ textarea:hover {
   font-size: 2rem;
   color: vars.$white;
 }
-.active{
+footer.footer .active{
   font-size: 1.5rem;
   color: vars.$green;
+}
+header .active{
+  color: vars.$white;
 }

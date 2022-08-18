@@ -6,10 +6,13 @@
     width: 100%!important;
     box-shadow: 0 0 0.5rem 0 vars.$color-primary;
     margin: 0 0 2rem 0;
+    z-index: 1;
     &-logo {
         width: 10%;
+        transition: all 0.3s ease-in-out;
         &:hover{
             width: 12%;
+            transition: all 0.3s ease-in-out;
         }
     }
     &-button_close button {

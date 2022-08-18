@@ -1,9 +1,24 @@
-.app {
-  width: 500px;
-  margin: 1em auto;
-  text-align: center;
-}
-
-.app img {
-  max-width: 150px;
+.mentions{
+  & .icon-location{
+    font-size: 2rem;
+  }
+  & ul {
+    line-height: 1.5rem;
+    font-weight: bold;
+  }
+  & h2 {
+    margin: 1rem;
+  }
+  & p {
+    margin: 1rem;
+    line-height: 1.5rem;
+  }
+  & ol {
+    list-style: decimal;
+    padding: 0 0 0 1rem;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 1rem;
+  }
 }
