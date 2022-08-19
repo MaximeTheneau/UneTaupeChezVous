@@ -11,7 +11,6 @@
         width: 10%;
         transition: all 0.3s ease-in-out;
         &:hover{
-            width: 12%;
             transition: all 0.3s ease-in-out;
         }
     }
@@ -29,7 +28,6 @@
         &:hover {
             height: 3.5rem;
             width: 3.5rem;
-            font-size: 2.4rem;
             transition: all 0.3s ease-in-out;
         }
     }

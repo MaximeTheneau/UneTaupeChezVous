@@ -14,8 +14,8 @@ function ModalBox() {
   useEffect(() => {
     setTimeout(() => {
       console.log("yep");
-      dispatch(toggleModal());
       navigate("/");
+      dispatch(toggleModal());
     }, 7000,);
   }, []);
   return (

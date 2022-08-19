@@ -20,6 +20,7 @@ function Contact() {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     console.log(evt.target);
+    {/* install emailjs-com */}
     emailjs
       .sendForm(
         "service_{ID_SERVICE}",
