@@ -2,21 +2,16 @@
 import "./styles.css";
 import emailjs from "emailjs-com";
 import TaupesVacances from "../../../../assets/svg/illustration-taupe-vacances.svg";
-import Unchecked from "../../../../assets/svg/checked.svg";
-import Checked from "../../../../assets/svg/checked-validate.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { contactForm, postContact } from "../../../../action/contact";
-import { useRef } from "react";
+import { toggleModal } from "../../../../action/modalBox";
 
 // == Composant
 function Contact() {
-  const form = useRef();
-  const nameValue = useSelector((state) => state.contact.name);
-  const email = useSelector((state) => state.contact.email);
-  const message = useSelector((state) => state.contact.message);
-  const checkDevis = useSelector((state) => state.contact.checkDevis);
-  const checkMessage = useSelector((state) => state.contact.checkMessage);
   const dispatch = useDispatch();
+  const nameValue = useSelector((state) => state.contact.name);
+  const emailValue = useSelector((state) => state.contact.email);
+  const messageValue = useSelector((state) => state.contact.message);
+
   const handleSubmit = (evt) => {
     evt.preventDefault();
     console.log(evt.target);
@@ -29,6 +24,7 @@ function Contact() {
         "{KEY_PUBLIC}"
       )
     .then((result) => {
+      dispatch(toggleModal());
         console.log(result.text);
     }, (error) => {
         console.log(error.text);
@@ -55,6 +51,7 @@ function Contact() {
           <input
             name="user_email"
             type="email"
+            value={emailValue}
             className="contact-form-input"
             onChange={(evt) => dispatch(contactForm(evt.target.value, "email"))}
             required
@@ -65,7 +62,7 @@ function Contact() {
           <textarea
             name="message"
             className="contact-form-input"
-            value={message}
+            value={messageValue}
             onChange={(evt) =>
               dispatch(contactForm(evt.target.value, "message"))
             }
