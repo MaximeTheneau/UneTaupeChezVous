@@ -2,9 +2,9 @@
 import "./styles.css";
 import { Link } from "react-router-dom";
 import Illustration from "../../../../assets/svg/illustration-jardin-taupe.svg";
-import Environment from "../../../../assets/svg/icon-environment.svg";
-import Certified from "../../../../assets/svg/icon-certified.svg";
-import Trap from "../../../../assets/svg/icon-trap.svg";
+import Environment from "../../../../assets/svg/illustration-environment.svg";
+import Certified from "../../../../assets/svg/illustration-certified.svg";
+import Trap from "../../../../assets/svg/illustration-trap.svg";
 import MapSvg from "../../../../assets/svg/carte-ile-de-france.svg";
 import Taupe from "../../../../assets/svg/taupe.svg";
 import Fouine from "../../../../assets/svg/fouine.svg";
