@@ -24,8 +24,23 @@ function Home() {
           content="Une Taupe Chez Vous Artisant Maître Taupiers depuis presque 30 ans. Intervient en yvelynes (78), pour les nuisibles comme les taupes, ragondin, fouines, etc..."
         />
       </MetaTags>
-      <img src={illustration} alt="illustration" />
-      <img src={Logo} alt="Logo Une Taupe Chez Vous" className="home-logo" />
+      <picture>
+        <source srcSet={`${illustration}.webp`} type="image/webp" />
+        <img
+          src={illustration}
+          alt="Illustration taupes jardin"
+          title="Illustration taupes jardin"
+        />
+      </picture>
+      <picture>
+        <source srcSet={`${Logo}.webp`} type="image/webp" />
+        <img
+          src={Logo}
+          alt="Logo Une Taupe Chez Vous"
+          className="home-logo"
+          title="Logo Une taupe chez vous"
+        />
+      </picture>
       <h1 className="home-title">Une Taupe Chez vous</h1>
       <h2 className="home-subtitle">Artisans Maitre Taupiers piégeurs</h2>
       <p className="home-paragrah">
