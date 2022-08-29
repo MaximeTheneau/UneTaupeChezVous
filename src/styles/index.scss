@@ -53,15 +53,16 @@ textarea {
   background-color: none !important;
   font-size: 1rem;
   padding: 0.5rem;
-  transition: width 0.5s ease-in-out;
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
 }
 input:focus,
 textarea:focus,
 input:hover,
 textarea:hover {
   border: 0.2rem solid vars.$green !important;
-  width: 100%;
-  transition: width 0.5s ease-in-out;
+  padding-left: 1rem;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .header-navbar-item:hover,
@@ -75,4 +76,7 @@ footer.footer .active{
 }
 header .active{
   color: vars.$white;
+}
+em {
+  font-weight: bold;
 }

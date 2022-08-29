@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { toggleModal } from "../../action/modalBox";
-import CardImg from "../../assets/svg/card-illustration.svg";
+import CardImg from "../../assets/svg/card-illustration.svg?url";
 import "./styles.css";
 
 // == Composant
@@ -23,7 +23,7 @@ function ModalBox() {
       <div className="modal-blur"></div>
       <div className="modal">
         <div className="modal_img">
-          <CardImg />
+          <img src={CardImg} alt="Illustration cards" />
         </div>
         <div className="modal_description">
           <h2>Bien reçu</h2>

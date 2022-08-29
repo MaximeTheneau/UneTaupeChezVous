@@ -2,9 +2,9 @@
 import { MetaTags } from "react-meta-tags";
 import { Link } from "react-router-dom";
 import "./styles.css";
-import Taupe from "../../../../assets/svg/taupe.svg";
-import Fouine from "../../../../assets/svg/fouine.svg";
-import Ragondin from "../../../../assets/svg/ragondin.svg";
+import Taupe from "../../../../assets/svg/taupe.svg?url";
+import Fouine from "../../../../assets/svg/fouine.svg?url";
+import Ragondin from "../../../../assets/svg/ragondin.svg?url";
 // == Composant
 function Services() {
   return (
@@ -22,7 +22,7 @@ function Services() {
         <div className="home-card-service">
           <Link to="/services/nuisibles/taupe">
             <div className="home-list-services_list_img">
-              <Taupe />
+              <img src={Taupe} alt="illustration taupe" />
             </div>
             <h3 className="home-card-service_title">Taupes</h3>
           </Link>
@@ -31,7 +31,7 @@ function Services() {
         <div className="home-card-service">
           <Link to="/services/nuisibles/fouine">
             <div className="home-list-services_list_img">
-              <Fouine />
+              <img src={Fouine} alt="illustration fouine" />
             </div>
             <h3 className="home-card-service_title">Fouines</h3>
           </Link>
@@ -40,7 +40,7 @@ function Services() {
         <div className="home-card-service">
           <Link to="/services/nuisibles/ragondin">
             <div className="home-services_list_img">
-              <Ragondin />
+              <img src={Ragondin} alt="illustration ragondin" />
             </div>
             <h3 className="home-card-service_title">Ragondins</h3>
         </Link>

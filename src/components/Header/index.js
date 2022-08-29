@@ -2,7 +2,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { toogleNavbar, toogleNavbarSubtitle } from "../../action/header";
-import Logo from "../../assets/svg/logo-une-taupe-chez-vous.svg";
+import Logo from "../../assets/svg/logo-une-taupe-chez-vous.svg?url";
 import "./styles.css";
 
 // == Composant
@@ -23,7 +23,7 @@ function Header() {
           <div className="header-navbar-toggle">
             <div className="header-logo">
               <NavLink to="/">
-                <Logo />
+                <img src={Logo} alt="Logo Une Taupe Chez Vous" />
               </NavLink>
             </div>
             <div className="header-button_close">
@@ -37,7 +37,7 @@ function Header() {
             <div className="header-navbar-toggle">
               <div className="header-logo">
                 <NavLink to="/">
-                  <Logo />
+                  <img src={Logo} alt="Logo Une Taupe Chez Vous" />
                 </NavLink>
               </div>
               <div className="header-button_close">
@@ -57,7 +57,7 @@ function Header() {
                   className="header-navbar-item_subtitle"
                   onClick={() => dispatch(toogleNavbarSubtitle())}
                 >
-                  Services
+                  <NavLink to="#services">Services</NavLink>
                   {toggleNavSubtitle ? (
                     <i className="icon-angle" />
                   ) : (

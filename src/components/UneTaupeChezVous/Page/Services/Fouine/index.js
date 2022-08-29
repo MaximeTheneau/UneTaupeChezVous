@@ -1,5 +1,5 @@
 // == Import
-import FouineSvg from "../../../../../assets/svg/fouine.svg";
+import FouineSvg from "../../../../../assets/svg/fouine.svg?url";
 
 // == Composant
 function Fouine() {
@@ -8,7 +8,7 @@ function Fouine() {
       <h1>Fouine </h1>
       <div className="service-card">
         <div className="service-card_img">
-          <FouineSvg />
+          <img src={FouineSvg} alt="illustration fouine" />
         </div>
         <div className="service-card_content">
           <p>Les taupes jouent un rôle dans l'écosystème.</p>

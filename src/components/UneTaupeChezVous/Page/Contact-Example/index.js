@@ -1,7 +1,7 @@
 // == Import
 import "./styles.css";
 import emailjs from "emailjs-com";
-import TaupesVacances from "../../../../assets/svg/illustration-taupe-vacances.svg";
+import TaupesVacances from "../../../../assets/svg/illustration-taupe-vacances.svg?url";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleModal } from "../../../../action/modalBox";
 
@@ -32,7 +32,7 @@ function Contact() {
   };
   return (
     <>
-      <TaupesVacances />
+      <img src={TaupesVacances} alt="illustration taupes Vacances" />
       <h1>Contact</h1>
       <form className="contact-form" onSubmit={handleSubmit}>
         <label htmlFor="Name">

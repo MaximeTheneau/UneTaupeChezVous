@@ -1,0 +1,9 @@
+.service{
+    &-card{
+        &_content{
+            &_environment{
+                width: 30%;
+            }
+        }
+    }
+} 

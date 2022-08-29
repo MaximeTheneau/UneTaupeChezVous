@@ -1,15 +1,16 @@
 // == Import
 import "./styles.css";
 import { Link } from "react-router-dom";
-import Illustration from "../../../../assets/svg/illustration-jardin-taupe.svg";
-import Environment from "../../../../assets/svg/illustration-environment.svg";
-import Certified from "../../../../assets/svg/illustration-certified.svg";
-import Trap from "../../../../assets/svg/illustration-trap.svg";
-import MapSvg from "../../../../assets/svg/carte-ile-de-france.svg";
-import Taupe from "../../../../assets/svg/taupe.svg";
-import Fouine from "../../../../assets/svg/fouine.svg";
-import Ragondin from "../../../../assets/svg/ragondin.svg";
-import Logo from "../../../../assets/svg/logo-une-taupe-chez-vous.svg";
+import illustration from "../../../../assets/svg/illustration-jardin-taupe.svg?url";
+
+import Environment from "../../../../assets/svg/illustration-environment.svg?url";
+import Certified from "../../../../assets/svg/illustration-certified.svg?url";
+import Trap from "../../../../assets/svg/illustration-trap.svg?url";
+import MapSvg from "../../../../assets/svg/carte-ile-de-france.svg?url";
+import Taupe from "../../../../assets/svg/taupe.svg?url";
+import Fouine from "../../../../assets/svg/fouine.svg?url";
+import Ragondin from "../../../../assets/svg/ragondin.svg?url";
+import Logo from "../../../../assets/svg/logo-une-taupe-chez-vous.svg?url";
 import { MetaTags } from "react-meta-tags";
 
 // == Composant
@@ -23,8 +24,8 @@ function Home() {
           content="Une Taupe Chez Vous Artisant Maître Taupiers depuis presque 30 ans. Intervient en yvelynes (78), pour les nuisibles comme les taupes, ragondin, fouines, etc..."
         />
       </MetaTags>
-      <Illustration />
-      <Logo alt="logo une Taupe Chez Vous" className="home-logo"/>
+      <img src={illustration} alt="illustration" />
+      <img src={Logo} alt="Logo Une Taupe Chez Vous" className="home-logo" />
       <h1 className="home-title">Une Taupe Chez vous</h1>
       <h2 className="home-subtitle">Artisans Maitre Taupiers piégeurs</h2>
       <p className="home-paragrah">
@@ -39,7 +40,7 @@ function Home() {
         {/*--home-card--*/}
         <div className="home-card">
           <div className="home-card_img">
-            <Environment />
+            <img src={Environment} alt="illustration environnement" />
           </div>
           <div className="home-card_description">
             <h3>Sans danger pour l'environnement</h3>
@@ -48,7 +49,7 @@ function Home() {
         {/*--home-card--*/}
         <div className="home-card">
           <div className="home-card_img">
-            <Certified />
+            <img src={Certified} alt="illustration certified" />
           </div>
           <div className="home-card_description">
             <h3>Piégeur Agréé</h3>
@@ -57,7 +58,7 @@ function Home() {
         {/*--home-card--*/}
         <div className="home-card">
           <div className="home-card_img">
-            <Trap />
+            <img src={Trap} alt="illustration trap" />
           </div>
           <div className="home-card_description">
             <h3>Piéges sans danger pour les animaux de compagnie</h3>
@@ -72,7 +73,7 @@ function Home() {
           <div className="home-card-service">
             <Link to="/services/nuisibles/taupe">
               <div className="home-list-services_list_img">
-                <Taupe />
+                <img src={Taupe} alt="illustration taupe" />
               </div>
               <h3 className="home-card-service_title">Taupes</h3>
             </Link>
@@ -81,7 +82,7 @@ function Home() {
           <div className="home-card-service">
             <Link to="/services/nuisibles/fouine">
               <div className="home-list-services_list_img">
-                <Fouine />
+                <img src={Fouine} alt="illustration fouine" />
               </div>
               <h3 className="home-card-service_title">Fouines</h3>
             </Link>
@@ -90,7 +91,7 @@ function Home() {
           <div className="home-card-service">
             <Link to="/services/nuisibles/ragondin">
               <div className="home-services_list_img">
-                <Ragondin />
+                <img src={Ragondin} alt="illustration ragondin" />
               </div>
               <h3 className="home-card-service_title">Ragondins</h3>
           </Link>
@@ -107,7 +108,7 @@ function Home() {
           </p>
         </div>
         <div className="home-map_img">
-          <MapSvg />
+          <img src={MapSvg} alt="illustration dessins carte ile de france" />
         </div>
       </div>
     </>

@@ -8,7 +8,6 @@ import Taupe from "./Page/Services/Taupe";
 
 import MentionsLegal from "./Page/MentionsLegal";
 import Services from "./Page/Services";
-import "./styles.css";
 import Ragondin from "./Page/Services/Ragondin";
 import Fouine from "./Page/Services/Fouine";
 import ModalBox from "../ModalBox";
