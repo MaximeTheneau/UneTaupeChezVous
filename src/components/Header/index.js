@@ -57,7 +57,7 @@ function Header() {
                   className="header-navbar-item_subtitle"
                   onClick={() => dispatch(toogleNavbarSubtitle())}
                 >
-                  <NavLink to="#services">Services</NavLink>
+                  Services
                   {toggleNavSubtitle ? (
                     <i className="icon-angle" />
                   ) : (

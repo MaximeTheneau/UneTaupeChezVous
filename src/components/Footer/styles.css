@@ -1,5 +1,6 @@
 @use './src/styles/vars';
 footer.footer {
+    transition: color 0.5s ease-in-out;
     background: #e9ece8;
     padding: 1rem;
     margin: 2rem 0 0;
@@ -11,6 +12,8 @@ footer.footer {
     }
     &-link:hover{
         color: vars.$green; 
+        transition: color 0.5s ease-in-out;
+
     }
     &-author {
         opacity: 0.5;
@@ -19,5 +22,7 @@ footer.footer {
     }
     & a:hover{
         color: vars.$green;
+        transition: color 0.5s ease-in-out;
+
     }
 }

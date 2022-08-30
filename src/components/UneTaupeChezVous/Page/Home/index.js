@@ -2,19 +2,20 @@
 import "./styles.css";
 import { Link } from "react-router-dom";
 import illustration from "../../../../assets/svg/illustration-jardin-taupe.svg?url";
-
 import Environment from "../../../../assets/svg/illustration-environment.svg?url";
 import Certified from "../../../../assets/svg/illustration-certified.svg?url";
 import Trap from "../../../../assets/svg/illustration-trap.svg?url";
 import MapSvg from "../../../../assets/svg/carte-ile-de-france.svg?url";
 import Taupe from "../../../../assets/svg/taupe.svg?url";
+import TaupeWebp from "../../../../assets/svg/taupe.webp";
+
 import Fouine from "../../../../assets/svg/fouine.svg?url";
 import Ragondin from "../../../../assets/svg/ragondin.svg?url";
 import Logo from "../../../../assets/svg/logo-une-taupe-chez-vous.svg?url";
-import { MetaTags } from "react-meta-tags";
-
+import MetaTags from "react-meta-tags";
 // == Composant
 function Home() {
+
   return (
     <>
       <MetaTags>
@@ -25,15 +26,7 @@ function Home() {
         />
       </MetaTags>
       <picture>
-        <source srcSet={`${illustration}.webp`} type="image/webp" />
-        <img
-          src={illustration}
-          alt="Illustration taupes jardin"
-          title="Illustration taupes jardin"
-        />
-      </picture>
-      <picture>
-        <source srcSet={`${Logo}.webp`} type="image/webp" />
+        <source srcSet={TaupeWebp} type="image/webp" />
         <img
           src={Logo}
           alt="Logo Une Taupe Chez Vous"
@@ -120,6 +113,10 @@ function Home() {
           <p>
             Pour tous demande de devis ou demande de renseignement
             <Link to="/contact"> contactez-nous</Link>
+          </p>
+          <p>
+            <i className="icon-phone" />
+            <a href="tel:+1-555-555-1212">555-555-1212</a>
           </p>
         </div>
         <div className="home-map_img">
