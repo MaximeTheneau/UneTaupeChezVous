@@ -1,5 +1,7 @@
 // == Import
 import RagondinSvg from "../../../../../assets/svg/ragondin.svg?url";
+import RagondinWebp from "../../../../../assets/webp/ragondin.webp";
+
 
 // == Composant
 function Ragondin() {
@@ -8,7 +10,10 @@ function Ragondin() {
       <h1>Ragondin </h1>
       <div className="service-card">
         <div className="service-card_img">
-          <img src={RagondinSvg} alt="illustration ragondin" />
+        <picture>
+            <source srcSet={RagondinWebp} type="image/webp" />
+            <img src={RagondinSvg} alt="illustration ragondin" />
+          </picture>
         </div>
         <div className="service-card_content">
           <p>Les taupes jouent un rôle dans l'écosystème.</p>

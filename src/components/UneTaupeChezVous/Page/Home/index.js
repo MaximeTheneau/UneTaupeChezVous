@@ -2,16 +2,24 @@
 import "./styles.css";
 import { Link } from "react-router-dom";
 import illustration from "../../../../assets/svg/illustration-jardin-taupe.svg?url";
+import illustrationWebp from "../../../../assets/webp/illustration-jardin-taupe.webp";
 import Environment from "../../../../assets/svg/illustration-environment.svg?url";
+import EnvironmentWebp from "../../../../assets/webp/illustration-environment.webp";
 import Certified from "../../../../assets/svg/illustration-certified.svg?url";
+import CertifiedWebp from "../../../../assets/webp/illustration-certified.webp";
 import Trap from "../../../../assets/svg/illustration-trap.svg?url";
+import TrapWebp from "../../../../assets/webp/illustration-trap.webp";
 import MapSvg from "../../../../assets/svg/carte-ile-de-france.svg?url";
+import MapWebp from "../../../../assets/webp/carte-ile-de-france.webp";
 import Taupe from "../../../../assets/svg/taupe.svg?url";
-import TaupeWebp from "../../../../assets/svg/taupe.webp";
-
+import TaupeWebp from "../../../../assets/webp/taupe.webp";
 import Fouine from "../../../../assets/svg/fouine.svg?url";
+import FouineWebp from "../../../../assets/webp/fouine.webp";
 import Ragondin from "../../../../assets/svg/ragondin.svg?url";
+import RagondinWebp from "../../../../assets/webp/ragondin.webp";
 import Logo from "../../../../assets/svg/logo-une-taupe-chez-vous.svg?url";
+import LogoWebp from "../../../../assets/webp/logo-une-taupe-chez-vous.webp";
+
 import MetaTags from "react-meta-tags";
 // == Composant
 function Home() {
@@ -26,7 +34,15 @@ function Home() {
         />
       </MetaTags>
       <picture>
-        <source srcSet={TaupeWebp} type="image/webp" />
+        <source srcSet={illustrationWebp} type="image/webp" />
+        <img
+          src={illustration}
+          alt="Illustration d'une taupe dans un jardin avec une tondeuse"
+          title="illustration Une taupe chez vous"
+        />
+      </picture>
+      <picture>
+        <source srcSet={LogoWebp} type="image/webp" />
         <img
           src={Logo}
           alt="Logo Une Taupe Chez Vous"
@@ -48,7 +64,14 @@ function Home() {
         {/*--home-card--*/}
         <div className="home-card">
           <div className="home-card_img">
-            <img src={Environment} alt="illustration environnement" />
+            <picture>
+              <source srcSet={EnvironmentWebp} type="image/webp" />
+              <img
+                src={Environment}
+                alt="Illustration Environment"
+                title="illustration Environment"
+              />
+            </picture>
           </div>
           <div className="home-card_description">
             <h3>Sans danger pour l'environnement</h3>
@@ -57,7 +80,14 @@ function Home() {
         {/*--home-card--*/}
         <div className="home-card">
           <div className="home-card_img">
-            <img src={Certified} alt="illustration certified" />
+            <picture>
+              <source srcSet={CertifiedWebp} type="image/webp" />
+              <img
+                src={Certified}
+                alt="illustration certified"
+                title="illustration certified"
+              />
+            </picture>
           </div>
           <div className="home-card_description">
             <h3>Piégeur Agréé</h3>
@@ -66,7 +96,14 @@ function Home() {
         {/*--home-card--*/}
         <div className="home-card">
           <div className="home-card_img">
-            <img src={Trap} alt="illustration trap" />
+            <picture>
+              <source srcSet={TrapWebp} type="image/webp" />
+              <img
+                src={Trap}
+                alt="illustration trap"
+                title="illustraion trap"
+              />
+            </picture>
           </div>
           <div className="home-card_description">
             <h3>Piéges sans danger pour les animaux de compagnie</h3>
@@ -81,7 +118,14 @@ function Home() {
           <div className="home-card-service">
             <Link to="/services/nuisibles/taupe">
               <div className="home-list-services_list_img">
-                <img src={Taupe} alt="illustration taupe" />
+                <picture>
+                  <source srcSet={TaupeWebp} type="image/webp" />
+                  <img
+                    src={Taupe}
+                    alt="illustration de taupe"
+                    title="illustration de taupe"
+                  />
+                </picture>
               </div>
               <h3 className="home-card-service_title">Taupes</h3>
             </Link>
@@ -90,7 +134,10 @@ function Home() {
           <div className="home-card-service">
             <Link to="/services/nuisibles/fouine">
               <div className="home-list-services_list_img">
-                <img src={Fouine} alt="illustration fouine" />
+                <picture>
+                  <source srcSet={FouineWebp} type="image/webp" />
+                  <img src={Fouine} alt="illustration fouine" />
+                </picture>
               </div>
               <h3 className="home-card-service_title">Fouines</h3>
             </Link>
@@ -99,7 +146,10 @@ function Home() {
           <div className="home-card-service">
             <Link to="/services/nuisibles/ragondin">
               <div className="home-services_list_img">
-                <img src={Ragondin} alt="illustration ragondin" />
+                <picture>
+                  <source srcSet={RagondinWebp} type="image/webp" />
+                  <img src={Ragondin} alt="illustration ragondin" />
+                </picture>
               </div>
               <h3 className="home-card-service_title">Ragondins</h3>
           </Link>
@@ -120,7 +170,14 @@ function Home() {
           </p>
         </div>
         <div className="home-map_img">
-          <img src={MapSvg} alt="illustration dessins carte ile de france" />
+          <picture>
+            <source srcSet={MapWebp} type="image/webp" />
+            <img
+              src={MapSvg}
+              alt="illustration dessins carte ile de france"
+              title="illustration dessins carte ile de france"
+            />
+          </picture>
         </div>
       </div>
     </>

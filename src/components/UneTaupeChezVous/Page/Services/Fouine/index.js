@@ -1,5 +1,7 @@
 // == Import
 import FouineSvg from "../../../../../assets/svg/fouine.svg?url";
+import FouineWebp from "../../../../../assets/webp/fouine.webp";
+
 
 // == Composant
 function Fouine() {
@@ -8,7 +10,10 @@ function Fouine() {
       <h1>Fouine </h1>
       <div className="service-card">
         <div className="service-card_img">
-          <img src={FouineSvg} alt="illustration fouine" />
+          <picture>
+            <source srcSet={FouineWebp} type="image/svg" />
+            <img src={FouineSvg} alt="illustration fouine" />
+          </picture>
         </div>
         <div className="service-card_content">
           <p>Les taupes jouent un rôle dans l'écosystème.</p>

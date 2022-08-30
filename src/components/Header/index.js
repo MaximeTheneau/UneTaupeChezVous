@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { toogleNavbar, toogleNavbarSubtitle } from "../../action/header";
 import Logo from "../../assets/svg/logo-une-taupe-chez-vous.svg?url";
+import LogoWebp from "../../assets/webp/logo-une-taupe-chez-vous.webp";
 import "./styles.css";
 
 // == Composant
@@ -23,7 +24,14 @@ function Header() {
           <div className="header-navbar-toggle">
             <div className="header-logo">
               <NavLink to="/">
-                <img src={Logo} alt="Logo Une Taupe Chez Vous" />
+                <picture>
+                  <source srcSet={LogoWebp} type="image/webp" />
+                  <img
+                    src={Logo}
+                    alt="Logo Une Taupe Chez Vous"
+                    title="Logo Une taupe chez vous"
+                  />
+                </picture>
               </NavLink>
             </div>
             <div className="header-button_close">
@@ -37,7 +45,14 @@ function Header() {
             <div className="header-navbar-toggle">
               <div className="header-logo">
                 <NavLink to="/">
-                  <img src={Logo} alt="Logo Une Taupe Chez Vous" />
+                  <picture>
+                    <source srcSet={LogoWebp} type="image/webp" />
+                    <img
+                      src={Logo}
+                      alt="Logo Une Taupe Chez Vous"
+                      title="Logo Une taupe chez vous"
+                    />
+                  </picture>
                 </NavLink>
               </div>
               <div className="header-button_close">
@@ -47,11 +62,9 @@ function Header() {
               </div>
             </div>
             <ul className="header-navbar">
-              <li className="header-navbar-item">
-                <NavLink to="/" onClick={() => dispatch(toogleNavbar())}>
-                  Accueil
-                </NavLink>
-              </li>
+              <NavLink to="/" onClick={() => dispatch(toogleNavbar())}>
+                <li className="header-navbar-item">Accueil</li>
+              </NavLink>
               <li>
                 <div
                   className="header-navbar-item_subtitle"
@@ -68,38 +81,30 @@ function Header() {
                   ""
                 ) : (
                   <ul className="header-navbar-subitem">
-                    <li className="header-navbar-subtitle-item">
-                      <NavLink
-                        to="/services/nuisibles/taupe"
-                        onClick={handleSubtitle}
-                      >
-                        Taupe
-                      </NavLink>
-                    </li>
-                    <li className="header-navbar-subtitle-item">
-                      <NavLink
-                        to="/services/nuisibles/fouine"
-                        onClick={handleSubtitle}
-                      >
-                        Fouine
-                      </NavLink>
-                    </li>
-                    <li className="header-navbar-subtitle-item">
-                      <NavLink
-                        to="/services/nuisibles/Ragondin"
-                        onClick={handleSubtitle}
-                      >
-                        Ragondin
-                      </NavLink>
-                    </li>
+                    <NavLink
+                      to="/services/nuisibles/taupe"
+                      onClick={handleSubtitle}
+                    >
+                      <li className="header-navbar-subtitle-item">Taupe</li>
+                    </NavLink>
+                    <NavLink
+                      to="/services/nuisibles/fouine"
+                      onClick={handleSubtitle}
+                    >
+                      <li className="header-navbar-subtitle-item">Fouine</li>
+                    </NavLink>
+                    <NavLink
+                      to="/services/nuisibles/Ragondin"
+                      onClick={handleSubtitle}
+                    >
+                      <li className="header-navbar-subtitle-item">Ragondin</li>
+                    </NavLink>
                   </ul>
                 )}
               </li>
-              <li className="header-navbar-item">
-                <NavLink to="/contact" onClick={() => dispatch(toogleNavbar())}>
-                  Contact
-                </NavLink>
-              </li>
+              <NavLink to="/contact" onClick={() => dispatch(toogleNavbar())}>
+                <li className="header-navbar-item">Contact</li>
+              </NavLink>
             </ul>
           </nav>
         )}
