@@ -12,6 +12,7 @@ import Ragondin from "./Page/Services/Ragondin";
 import Fouine from "./Page/Services/Fouine";
 import ModalBox from "../ModalBox";
 import { useDispatch, useSelector } from "react-redux";
+import ModalError from "../ModalError";
 
 function UneTaupeChezVous() {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ function UneTaupeChezVous() {
           <Route path="/services/nuisibles/fouine" element={<Fouine />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/mentions-legal" element={<MentionsLegal />} />
-          <Route path="*" element={<h1>404</h1>} />
+          <Route path="*" element={<ModalError />} />
         </Routes>
         {toggleModal ? <ModalBox /> : ""}
       </main>
