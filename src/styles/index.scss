@@ -1,12 +1,15 @@
 @use 'reset';
 @use 'vars';
 @use  'fontsIcon';
+@use  'fontsSignature';
 @font-face {
   font-family: 'general';
   src: url('../assets/fonts/Comfortaa.eot');
 }
 img {
   max-width: 100%;
+  width: 100%; /* or max-width: 100%; */
+  height: auto;
 }
 main.main {
   margin: auto;

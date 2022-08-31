@@ -36,6 +36,8 @@ function Home() {
       <picture>
         <source srcSet={illustrationWebp} type="image/webp" />
         <img
+          width="1000"
+          height="1000"
           src={illustration}
           alt="Illustration d'une taupe dans un jardin avec une tondeuse"
           title="illustration Une taupe chez vous"

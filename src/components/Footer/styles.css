@@ -1,5 +1,6 @@
 @use './src/styles/vars';
-footer.footer {
+
+.footer {
     transition: color 0.5s ease-in-out;
     background: #e9ece8;
     padding: 1rem;
@@ -19,6 +20,10 @@ footer.footer {
         opacity: 0.5;
         text-align: center;
         margin: 1rem;
+        &_signature {
+            font-size: 3rem;
+            padding: 0 0.5rem;
+        }
     }
     & a:hover{
         color: vars.$green;

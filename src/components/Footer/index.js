@@ -1,5 +1,9 @@
 // == Import
 import { NavLink } from "react-router-dom";
+// import Signature from ".src/assets/svg/theneau-maxime.svg?url";
+// import SignatureWebp from ".src/assets/webp/theneau-maxime.webp";
+import Signature from "../../assets/svg/theneau-maxime.svg?url";
+import SignatureWebp from "../../assets/webp/theneau-maxime.webp";
 import "./styles.css";
 
 // == Composant
@@ -21,7 +25,14 @@ function Footer() {
         </li>
       </ul>
       <div className="footer-author">
-        Site réaliser par <a href="#github">Theneau Maxime</a>
+        Site réaliser par
+        <a
+          href="https://github.com/MaximeTheneau"
+          target="blank"
+          className="footer-author_signature"
+        >
+          <i className="signature" />
+        </a>
       </div>
     </footer>
   );

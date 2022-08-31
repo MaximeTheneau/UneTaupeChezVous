@@ -12,6 +12,7 @@ function Taupe() {
           <picture>
             <source srcSet={TaupeWebp} type="image/webp" />
             <img
+              imagesizes="(max-width: 100%) 100%"
               src={TaupeSvg}
               alt="illustration de taupe"
               title="illustration de taupe"
