@@ -6,6 +6,21 @@
     url('../assets/fonts/icomoon.eot') format('eot'),
     url('../assets/fonts/icomoon.woff') format('woff');
   font-weight: normal;
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: 'signature';
+  //src:  url('fonts/icomoon.eot?5m9y13');
+  src: url('../assets/fonts/signature.svg') format('svg'),
+    url('../assets/fonts/signature.eot') format('eot'),
+    url('../assets/fonts/signature.woff') format('woff');
+  font-weight: normal;
+  font-weight: normal;
   font-style: normal;
   font-display: block;
   /* Better Font Rendering =========== */
@@ -15,7 +30,7 @@
 
 i {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'icomoon', 'signature' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -60,4 +75,7 @@ i {
 }
 .icon-linkedin:before {
   content: "\e93d";
+}
+.theneau-maxime:before {
+  content: "\e999";
 }

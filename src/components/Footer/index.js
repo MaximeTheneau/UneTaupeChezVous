@@ -27,7 +27,7 @@ function Footer() {
           target="blank"
           className="footer-author_signature"
         >
-          <i className="signature" />
+          <i className="theneau-maxime" />
         </a>
       </div>
     </footer>
