@@ -11,16 +11,13 @@ import Services from "./Page/Services";
 import Ragondin from "./Page/Services/Ragondin";
 import Fouine from "./Page/Services/Fouine";
 import ModalBox from "../ModalBox";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import ModalBoxError from "../ModalError";
 
 
 function UneTaupeChezVous() {
-  const dispatch = useDispatch();
   const toggleModal = useSelector((state) => state.modalBox.toggleModal);
-  const toggleError = useSelector((state) => state.modalBox.toggleModalError);
 
-  console.log(toggleModal);
   return (
     <>
       <Header />

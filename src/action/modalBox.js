@@ -12,3 +12,21 @@ export function toggleModalError() {
     type: TOGGLE_MODAL_ERROR,
   };
 }
+
+export const NUMBER_IMG = "NUMBER_IMG";
+
+export function numberImg(number) {
+  return {
+    type: NUMBER_IMG,
+    numberImg: number,
+  };
+}
+
+export const NUMBER_IMG2 = "NUMBER_IMG2";
+
+export function numberImg2(number) {
+  return {
+    type: NUMBER_IMG2,
+    numberImg2: number,
+  };
+}
