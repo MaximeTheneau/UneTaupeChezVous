@@ -1,9 +1,5 @@
 // == Import
 import { NavLink } from "react-router-dom";
-// import Signature from ".src/assets/svg/theneau-maxime.svg?url";
-// import SignatureWebp from ".src/assets/webp/theneau-maxime.webp";
-import Signature from "../../assets/svg/theneau-maxime.svg?url";
-import SignatureWebp from "../../assets/webp/theneau-maxime.webp";
 import "./styles.css";
 
 // == Composant
