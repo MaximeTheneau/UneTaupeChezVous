@@ -1,6 +1,5 @@
 import { TOGGLE_MODAL, TOGGLE_MODAL_ERROR } from "../action/modalBox";
 
-
 export const initialState = {
   toggleModal: false,
   toggleModalError: false,
