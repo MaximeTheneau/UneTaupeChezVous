@@ -36,6 +36,8 @@
             z-index: 3;
             position: fixed;
             width: 10%;
+            background: gray;
+            border-radius: 100%;
         }
     }
 

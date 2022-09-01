@@ -9,7 +9,7 @@ export const initialState = {
   toggleModal: false,
   toggleModalError: false,
   numberImg: [],
-  numberImg2: [],
+  numberImg2: null,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -23,12 +23,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         toggleModalError: !state.toggleModalError,
-        numberImg: false,
       };
     case NUMBER_IMG:
       return {
         ...state,
-        numberImg: state.numberImg.concat(action.numberImg),
+        numberImg: [...state.numberImg, state.numberImg.length + 1],
       };
     case NUMBER_IMG2:
       return {

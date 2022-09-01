@@ -24,9 +24,9 @@ export function numberImg(number) {
 
 export const NUMBER_IMG2 = "NUMBER_IMG2";
 
-export function numberImg2(number) {
+export function numberImg2(number, number2) {
   return {
     type: NUMBER_IMG2,
-    numberImg2: number,
+    numberImg2: [number, number2],
   };
 }
