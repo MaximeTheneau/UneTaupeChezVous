@@ -22,10 +22,13 @@ function UneTaupeChezVous() {
   const toggleModal = useSelector((state) => state.modalBox.toggleModal);
   const location = useLocation();
   useEffect(() => {
-    console.log(location.pathname);
     const locationPath = location.pathname === "/";
     locationPath ? dispatch(imgSticky()) : dispatch(imgStickyFalse());
+    setTimeout(() => {
+      dispatch(imgStickyFalse());
+    }, 300000);
   }, [location]);
+
 
 
   return (

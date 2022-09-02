@@ -1,7 +1,8 @@
 // == Import
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { toogleNavbar, toogleNavbarSubtitle } from "../../action/header";
+import { imgStickyFalse, toogleNavbar, toogleNavbarSubtitle } from "../../action/header";
 import Logo from "../../assets/svg/logo-une-taupe-chez-vous.svg?url";
 import LogoWebp from "../../assets/webp/logo-une-taupe-chez-vous.webp";
 import "./styles.css";
@@ -10,6 +11,8 @@ import "./styles.css";
 function Header() {
   const dispatch = useDispatch();
   const toggleNav = useSelector((state) => state.header.toogleNavbar);
+  const imgSticky = useSelector((state) => state.header.imgSticky);
+
   const toggleNavSubtitle = useSelector(
     (state) => state.header.toogleNavbarSubtitle
   );
@@ -17,20 +20,26 @@ function Header() {
     dispatch(toogleNavbarSubtitle());
     dispatch(toogleNavbar());
   };
+  useEffect(() => {
+    console.log(window.scrollY);
+}, []);
   return (
     <>
-      <picture>
-        <source
-          srcSet={require("../../assets/svg/logo-une-taupe-chez-vous.svg?url")}
-          type="image/webp"
-        />
-        <img
-          width="1000"
-          height="1000"
-          alt="Illustration d'une taupe dans un jardin avec une tondeuse"
-          title="illustration Une taupe chez vous" />
-      </picture>
-      <header className="header">
+      {imgSticky ? (
+        <picture>
+          <source
+            srcSet={require("../../assets/webp/illustration-jardin-taupe.webp")}
+            type="image/webp"
+          />
+          <img
+            src={require("../../assets/svg/illustration-jardin-taupe.svg?url")}
+            alt="Illustration d'une taupe dans un jardin avec une tondeuse"
+            title="illustration Une taupe chez vous" />
+        </picture>
+      ) : (
+        ""
+      )}
+      <header  className="header">
         {toggleNav ? (
           <div className="header-navbar-toggle">
             <div className="header-logo">
@@ -46,7 +55,13 @@ function Header() {
               </NavLink>
             </div>
             <div className="header-button_close">
-              <button className="" onClick={() => dispatch(toogleNavbar())}>
+              <button
+                className=""
+                onClick={() => {
+                  dispatch(toogleNavbar());
+                  dispatch(imgStickyFalse());
+                }}
+              >
                 <i className="icon-navbar" />
               </button>
             </div>
