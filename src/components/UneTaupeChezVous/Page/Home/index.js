@@ -1,8 +1,6 @@
 // == Import
 import "./styles.css";
 import { Link } from "react-router-dom";
-import illustration from "../../../../assets/svg/illustration-jardin-taupe.svg?url";
-import illustrationWebp from "../../../../assets/webp/illustration-jardin-taupe.webp";
 import Environment from "../../../../assets/svg/illustration-environment.svg?url";
 import EnvironmentWebp from "../../../../assets/webp/illustration-environment.webp";
 import Certified from "../../../../assets/svg/illustration-certified.svg?url";
@@ -20,10 +18,10 @@ import RagondinWebp from "../../../../assets/webp/ragondin.webp";
 import Logo from "../../../../assets/svg/logo-une-taupe-chez-vous.svg?url";
 import LogoWebp from "../../../../assets/webp/logo-une-taupe-chez-vous.webp";
 
-import MetaTags from "react-meta-tags";
+import MetaTags from "react-meta-tags";;
+
 // == Composant
 function Home() {
-
   return (
     <>
       <MetaTags>
@@ -33,16 +31,6 @@ function Home() {
           content="Une Taupe Chez Vous Artisant Maître Taupiers depuis presque 30 ans. Intervient en yvelynes (78), pour les nuisibles comme les taupes, ragondin, fouines, etc..."
         />
       </MetaTags>
-      <picture>
-        <source srcSet={illustrationWebp} type="image/webp" />
-        <img
-          width="1000"
-          height="1000"
-          src={illustration}
-          alt="Illustration d'une taupe dans un jardin avec une tondeuse"
-          title="illustration Une taupe chez vous"
-        />
-      </picture>
       <picture>
         <source srcSet={LogoWebp} type="image/webp" />
         <img

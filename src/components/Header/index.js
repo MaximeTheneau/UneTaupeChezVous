@@ -19,6 +19,17 @@ function Header() {
   };
   return (
     <>
+      <picture>
+        <source
+          srcSet={require("../../assets/svg/logo-une-taupe-chez-vous.svg?url")}
+          type="image/webp"
+        />
+        <img
+          width="1000"
+          height="1000"
+          alt="Illustration d'une taupe dans un jardin avec une tondeuse"
+          title="illustration Une taupe chez vous" />
+      </picture>
       <header className="header">
         {toggleNav ? (
           <div className="header-navbar-toggle">
