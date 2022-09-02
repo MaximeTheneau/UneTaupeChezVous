@@ -1,10 +1,13 @@
 // == Import
-import taupiniere from "../../assets/svg/taupiniere.svg?url";
-import taupiniereWebp from "../../assets/webp/taupiniere.webp";
+
 import "./styles.css";
 
 // == Composant
 function CreateImg() {
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * 3) + 1;
+  }
+  console.log(getRandomInt());
   return (
     <>
       <picture
@@ -14,11 +17,13 @@ function CreateImg() {
           top: `${Math.floor(Math.random() * 110)}%`,
         }}
       >
-        <source srcSet={taupiniereWebp} type="image/webp" />
+        <source
+          srcSet={require(`../../assets/svg/illustration-taupe-${getRandomInt()}.svg?url`)}
+          type="image/webp"
+        />
         <img
           width="1000"
           height="1000"
-          src={taupiniere}
           alt="Illustration d'une taupe dans un jardin avec une tondeuse"
           title="illustration Une taupe chez vous" />
       </picture>
