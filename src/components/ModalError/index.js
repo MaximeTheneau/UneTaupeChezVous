@@ -21,14 +21,14 @@ function ModalError() {
   useEffect(() => {
     setInterval(() => {
       dispatch(numberImg());
-    }, 700);
+    }, 1000);
   }, []);
 
   useEffect(() => {
     setTimeout(() => {
       navigate("/");
       dispatch(toggleModalError());
-    }, 7000);
+    }, 15000);
   }, []);
 
   return (
@@ -41,9 +41,9 @@ function ModalError() {
 
           <div className="modal-blur"></div>
           <div className="modal-error-animation" >
-          {numberCounterArray.map((number) => (
-            <CreateImg key={number} />
-          ))}
+            {numberCounterArray.map((number) => (
+              <CreateImg key={number} />
+            ))}
           </div>
           <div className="modal">
             <picture>
