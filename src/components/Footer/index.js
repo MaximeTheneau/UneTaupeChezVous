@@ -7,14 +7,15 @@ function Footer() {
   return (
     <footer className="footer">
       <ul>
-        <li className="footer-link">
+
+       <li className="footer-link">
           <NavLink to="/">Accueil</NavLink>
         </li>
         <li className="footer-link">
           <NavLink to="/services">Services</NavLink>
         </li>
         <li className="footer-link">
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/contact"> Contact</NavLink>
         </li>
         <li className="footer-link">
           <NavLink to="/mentions-legal">Mentions-légal</NavLink>
