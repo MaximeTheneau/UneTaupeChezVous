@@ -26,7 +26,7 @@ function UneTaupeChezVous() {
     locationPath ? dispatch(imgSticky()) : dispatch(imgStickyFalse());
     setTimeout(() => {
       dispatch(imgStickyFalse());
-    }, 300000);
+    }, 3000);
   }, [location]);
 
 

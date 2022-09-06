@@ -7,7 +7,7 @@ import FouineWebp from "../../../../../assets/webp/fouine.webp";
 function Fouine() {
   return (
     <>
-      <h1>Fouine </h1>
+      <h1>Fouine</h1>
       <div className="service-card">
         <div className="service-card_img">
           <picture>
@@ -16,12 +16,28 @@ function Fouine() {
           </picture>
         </div>
         <div className="service-card_content">
-          <p>Les taupes jouent un rôle dans l'écosystème.</p>
           <p>
-            L'objectif est de limiter la prolifération des taupes, fouines ou
-            autres animaux nuisibles dans les Yvelines grâce à des méthodes
-            naturelles de piégeage, sans produits chimiques ou nocifs pour
-            l'environnement.
+            La fouine est un animal de taille moyenne, elle mesure entre 40 et
+            60 cm.
+            <br />
+            Elle est reconnaissable à sa tache blanche couvrant la gorge et le
+            haut des pattes.
+            <br />
+          </p>
+          <h2>Utile ou nuisible ?</h2>
+          <p>
+            La fouine est un animal utile, elle est un prédateur chassant les de
+            nombreux rongeurs.
+          </p>
+          <h2>Comment se débarrasser d'une fouine dans le grenier ?</h2>
+          <p>
+            Une Taupes chez vous vous propose des solutions naturelles et sans
+            danger pour l'environnement pour lutter contre la fouine avec des
+            pièges sans danger pour vos animaux de compagnie, sans produits
+            chimiques chimiques ou nocifs pour l'environnement.
+            <br />
+            Nous vous proposons également des solutions de prévention pour
+            éviter que les fouines ne reviennent sur votre grenier.
           </p>
         </div>
       </div>

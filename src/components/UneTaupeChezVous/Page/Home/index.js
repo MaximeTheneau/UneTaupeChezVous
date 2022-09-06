@@ -150,14 +150,14 @@ function Home() {
       <h3>Interventions en Yvelynes (78)</h3>
       <div className="home-map">
         <div className="home-map_description">
-          <p>
+          <div>
             Pour tous demande de devis ou demande de renseignement
             <Link to="/contact"> contactez-nous</Link>
-          </p>
-          <p>
+          </div>
+          <div>
             <i className="icon-phone" />
-            <a href="tel:+1-555-555-1212">555-555-1212</a>
-          </p>
+            <a href="tel:+33232264958">02 32 26 49 58</a>
+          </div>
         </div>
         <div className="home-map_img">
           <picture>
