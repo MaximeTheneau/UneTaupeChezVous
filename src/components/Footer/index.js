@@ -7,9 +7,8 @@ function Footer() {
   return (
     <footer className="footer">
       <ul>
-
-       <li className="footer-link">
-                  <NavLink to="/">Accueil   1</NavLink>
+        <li className="footer-link">
+          <NavLink to="/">Accueil 1</NavLink>
         </li>
         <li className="footer-link">
           <NavLink to="/services">Services</NavLink>
