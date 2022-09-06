@@ -15,20 +15,28 @@ function Contact() {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     console.log(evt.target);
-    {/* install emailjs-com */}
+    {
+      /* 
+      install emailjs-com 
+      ----> https://dashboard.emailjs.com <----
+      */
+    }
     emailjs
       .sendForm(
         "service_{ID_SERVICE}",
-        "template_{TEMPLATE_SERVICE"},
+        "template_{TEMPLATE_SERVICE}",
         evt.target,
         "{KEY_PUBLIC}"
       )
-    .then((result) => {
-      dispatch(toggleModal());
-        console.log(result.text);
-    }, (error) => {
-        console.log(error.text);
-    });
+      .then(
+        (result) => {
+          dispatch(toggleModal());
+          // console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
   return (
     <>

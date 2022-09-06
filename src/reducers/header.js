@@ -1,9 +1,14 @@
-import { TOGGLE_NAVBAR_SUBTITLE, TOGGLE_NAVBAR } from "../action/header";
+import {
+  TOGGLE_NAVBAR_SUBTITLE,
+  TOGGLE_NAVBAR,
+  IMG_STICKY,
+  IMG_STICKY_FALSE,
+} from "../action/header";
 
 export const initialState = {
   toogleNavbar: true,
   toogleNavbarSubtitle: true,
-
+  imgSticky: null,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -12,6 +17,21 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         toogleNavbar: !state.toogleNavbar,
+      };
+    case IMG_STICKY:
+      return {
+        ...state,
+        imgSticky: !state.imgSticky,
+      };
+    case IMG_STICKY:
+      return {
+        ...state,
+        imgSticky: (state.imgSticky = true),
+      };
+    case IMG_STICKY_FALSE:
+      return {
+        ...state,
+        imgSticky: (state.imgSticky = false),
       };
     case TOGGLE_NAVBAR_SUBTITLE:
       return {

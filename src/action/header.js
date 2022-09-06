@@ -12,3 +12,18 @@ export function toogleNavbarSubtitle() {
     type: TOGGLE_NAVBAR_SUBTITLE,
   };
 }
+
+export const IMG_STICKY = "IMG_STICKY";
+
+export function imgSticky() {
+  return {
+    type: IMG_STICKY,
+  };
+}
+export const IMG_STICKY_FALSE = "IMG_STICKY_FALSE";
+
+export function imgStickyFalse() {
+  return {
+    type: IMG_STICKY_FALSE,
+  };
+}
