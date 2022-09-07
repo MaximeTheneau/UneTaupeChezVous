@@ -31,6 +31,7 @@ function UneTaupeChezVous() {
       dispatch(imgStickyFalse());
     }, 3000);
   }, [location]);
+  
 
   return (
     <>
