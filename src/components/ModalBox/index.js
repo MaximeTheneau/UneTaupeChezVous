@@ -3,8 +3,6 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { toggleModal } from "../../action/modalBox";
-import CardImg from "../../assets/svg/card-illustration.svg?url";
-import CardWebp from "../../assets/webp/card-illustration.webp";
 
 import "./styles.css";
 
@@ -26,8 +24,14 @@ function ModalBox() {
       <div className="modal">
         <div className="modal_img">
           <picture>
-            <source srcSet={CardWebp} type="image/webp" />
-            <img src={CardImg} alt="Illustration cards" />
+            <source
+              srcSet={require("../../assets/webp/card-illustration.webp")}
+              type="image/webp"
+            />
+            <img
+              src={require("../../assets/svg/card-illustration.svg")}
+              alt="Illustration cards"
+            />
           </picture>
         </div>
         <div className="modal_description">

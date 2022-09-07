@@ -2,12 +2,7 @@
 import { MetaTags } from "react-meta-tags";
 import { Link } from "react-router-dom";
 import "./styles.css";
-import Taupe from "../../../../assets/svg/taupe.svg?url";
-import TaupeWebp from "../../../../assets/webp/taupe.webp";
-import Fouine from "../../../../assets/svg/fouine.svg?url";
-import FouineWebp from "../../../../assets/webp/fouine.webp";
-import Ragondin from "../../../../assets/svg/ragondin.svg?url";
-import RagondinWebp from "../../../../assets/webp/ragondin.webp";
+
 // == Composant
 function Services() {
   return (
@@ -26,9 +21,12 @@ function Services() {
           <Link to="/services/nuisibles/taupe">
             <div className="home-list-services_list_img">
               <picture>
-                <source srcSet={TaupeWebp} type="image/webp" />
+                <source
+                  srcSet={require("../../../../assets/webp/taupe.webp")}
+                  type="image/webp"
+                />
                 <img
-                  src={Taupe}
+                  src={require("../../../../assets/svg/taupe.svg?url")}
                   alt="illustration de taupe"
                   title="illustration de taupe"
                 />
@@ -42,8 +40,14 @@ function Services() {
           <Link to="/services/nuisibles/fouine">
             <div className="home-list-services_list_img">
               <picture>
-                  <source srcSet={FouineWebp} type="image/webp" />
-                  <img src={Fouine} alt="illustration fouine" />
+                <source
+                  srcSet={require("../../../../assets/webp/fouine.webp")}
+                  type="image/webp"
+                />
+                <img
+                  src={require("../../../../assets/svg/fouine.svg?url")}
+                  alt="illustration fouine"
+                />
                 </picture>
             </div>
             <h3 className="home-card-service_title">Fouines</h3>
@@ -54,8 +58,14 @@ function Services() {
           <Link to="/services/nuisibles/ragondin">
             <div className="home-services_list_img">
               <picture>
-                <source srcSet={RagondinWebp} type="image/webp" />
-                <img src={Ragondin} alt="illustration ragondin" />
+                <source
+                  srcSet={require("../../../../assets/webp/ragondin.webp")}
+                  type="image/webp"
+                />
+                <img
+                  src={require("../../../../assets/svg/ragondin.svg?url")}
+                  alt="illustration ragondin"
+                />
               </picture>
             </div>
             <h3 className="home-card-service_title">Ragondins</h3>

@@ -1,24 +1,7 @@
 // == Import
 import "./styles.css";
 import { Link } from "react-router-dom";
-import Environment from "../../../../assets/svg/illustration-environment.svg?url";
-import EnvironmentWebp from "../../../../assets/webp/illustration-environment.webp";
-import Certified from "../../../../assets/svg/illustration-certified.svg?url";
-import CertifiedWebp from "../../../../assets/webp/illustration-certified.webp";
-import Trap from "../../../../assets/svg/illustration-trap.svg?url";
-import TrapWebp from "../../../../assets/webp/illustration-trap.webp";
-import MapSvg from "../../../../assets/svg/carte-ile-de-france.svg?url";
-import MapWebp from "../../../../assets/webp/carte-ile-de-france.webp";
-import Taupe from "../../../../assets/svg/taupe.svg?url";
-import TaupeWebp from "../../../../assets/webp/taupe.webp";
-import Fouine from "../../../../assets/svg/fouine.svg?url";
-import FouineWebp from "../../../../assets/webp/fouine.webp";
-import Ragondin from "../../../../assets/svg/ragondin.svg?url";
-import RagondinWebp from "../../../../assets/webp/ragondin.webp";
-import Logo from "../../../../assets/svg/logo-une-taupe-chez-vous.svg?url";
-import LogoWebp from "../../../../assets/webp/logo-une-taupe-chez-vous.webp";
-
-import MetaTags from "react-meta-tags";;
+import MetaTags from "react-meta-tags";
 
 // == Composant
 function Home() {
@@ -32,9 +15,12 @@ function Home() {
         />
       </MetaTags>
       <picture>
-        <source srcSet={LogoWebp} type="image/webp" />
+        <source
+          srcSet={require("../../../../assets/webp/logo-une-taupe-chez-vous.webp")}
+          type="image/webp"
+        />
         <img
-          src={Logo}
+          src={require("../../../../assets/svg/logo-une-taupe-chez-vous.svg?url")}
           alt="Logo Une Taupe Chez Vous"
           className="home-logo"
           title="Logo Une taupe chez vous"
@@ -55,9 +41,12 @@ function Home() {
         <div className="home-card">
           <div className="home-card_img">
             <picture>
-              <source srcSet={EnvironmentWebp} type="image/webp" />
+              <source
+                srcSet={require("../../../../assets/webp/illustration-environment.webp")}
+                type="image/webp"
+              />
               <img
-                src={Environment}
+                srcSet={require("../../../../assets/svg/illustration-environment.svg?url")}
                 alt="Illustration Environment"
                 title="illustration Environment"
               />
@@ -71,9 +60,12 @@ function Home() {
         <div className="home-card">
           <div className="home-card_img">
             <picture>
-              <source srcSet={CertifiedWebp} type="image/webp" />
+              <source
+                srcSet={require("../../../../assets/webp/illustration-certified.webp")}
+                type="image/webp"
+              />
               <img
-                src={Certified}
+                src={require("../../../../assets/svg/illustration-certified.svg?url")}
                 alt="illustration certified"
                 title="illustration certified"
               />
@@ -87,9 +79,12 @@ function Home() {
         <div className="home-card">
           <div className="home-card_img">
             <picture>
-              <source srcSet={TrapWebp} type="image/webp" />
+              <source
+                srcSet={require("../../../../assets/webp/illustration-trap.webp")}
+                type="image/webp"
+              />
               <img
-                src={Trap}
+                src={require("../../../../assets/svg/illustration-trap.svg?url")}
                 alt="illustration trap"
                 title="illustraion trap"
               />
@@ -109,9 +104,12 @@ function Home() {
             <Link to="/services/nuisibles/taupe">
               <div className="home-list-services_list_img">
                 <picture>
-                  <source srcSet={TaupeWebp} type="image/webp" />
+                  <source
+                    srcSet={require("../../../../assets/webp/taupe.webp")}
+                    type="image/webp"
+                  />
                   <img
-                    src={Taupe}
+                    src={require("../../../../assets/svg/taupe.svg?url")}
                     alt="illustration de taupe"
                     title="illustration de taupe"
                   />
@@ -125,8 +123,14 @@ function Home() {
             <Link to="/services/nuisibles/fouine">
               <div className="home-list-services_list_img">
                 <picture>
-                  <source srcSet={FouineWebp} type="image/webp" />
-                  <img src={Fouine} alt="illustration fouine" />
+                  <source
+                    srcSet={require("../../../../assets/webp/fouine.webp")}
+                    type="image/webp"
+                  />
+                  <img
+                    src={require("../../../../assets/svg/fouine.svg?url")}
+                    alt="illustration fouine"
+                  />
                 </picture>
               </div>
               <h3 className="home-card-service_title">Fouines</h3>
@@ -137,8 +141,8 @@ function Home() {
             <Link to="/services/nuisibles/ragondin">
               <div className="home-services_list_img">
                 <picture>
-                  <source srcSet={RagondinWebp} type="image/webp" />
-                  <img src={Ragondin} alt="illustration ragondin" />
+                  <source srcSet={require("../../../../assets/webp/ragondin.webp")} type="image/webp" />
+                  <img src={require("../../../../assets/svg/ragondin.svg?url")} alt="illustration ragondin" />
                 </picture>
               </div>
               <h3 className="home-card-service_title">Ragondins</h3>
@@ -161,9 +165,12 @@ function Home() {
         </div>
         <div className="home-map_img">
           <picture>
-            <source srcSet={MapWebp} type="image/webp" />
+            <source
+              srcSet={require("../../../../assets/webp/carte-ile-de-france.webp")}
+              type="image/webp"
+            />
             <img
-              src={MapSvg}
+              src={require("../../../../assets/svg/carte-ile-de-france.svg?url")}
               alt="illustration dessins carte ile de france"
               title="illustration dessins carte ile de france"
             />

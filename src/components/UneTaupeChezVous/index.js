@@ -22,16 +22,12 @@ function UneTaupeChezVous() {
   const dispatch = useDispatch();
   const toggleModal = useSelector((state) => state.modalBox.toggleModal);
   const spinnerHomeLoader = useSelector((state) => state.header.spinnerHome);
-  console.log(spinnerHome);
   const location = useLocation();
   useEffect(() => {
     const locationPath = location.pathname === "/";
     locationPath ? dispatch(imgSticky()) : dispatch(imgStickyFalse());
-    setTimeout(() => {
-      dispatch(imgStickyFalse());
-    }, 3000);
   }, [location]);
-  
+
 
   return (
     <>
