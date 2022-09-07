@@ -3,12 +3,14 @@ import {
   TOGGLE_NAVBAR,
   IMG_STICKY,
   IMG_STICKY_FALSE,
+  SPINNER_HOME,
 } from "../action/header";
 
 export const initialState = {
   toogleNavbar: true,
   toogleNavbarSubtitle: true,
   imgSticky: null,
+  spinnerHome: false,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -37,6 +39,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         toogleNavbarSubtitle: !state.toogleNavbarSubtitle,
+      };
+    case SPINNER_HOME:
+      return {
+        ...state,
+        spinnerHome: !state.spinnerHome,
       };
     default:
       return state;

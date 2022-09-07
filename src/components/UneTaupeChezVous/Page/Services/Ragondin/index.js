@@ -1,7 +1,4 @@
 // == Import
-import RagondinSvg from "../../../../../assets/svg/ragondin.svg?url";
-import RagondinWebp from "../../../../../assets/webp/ragondin.webp";
-
 
 // == Composant
 function Ragondin() {
@@ -10,9 +7,15 @@ function Ragondin() {
       <h1>Ragondin </h1>
       <div className="service-card">
         <div className="service-card_img">
-        <picture>
-            <source srcSet={RagondinWebp} type="image/webp" />
-            <img src={RagondinSvg} alt="illustration ragondin" />
+          <picture>
+            <source
+              srcSet={require("../../../../../assets/svg/ragondin.svg?url")}
+              type="image/webp"
+            />
+            <img
+              src={require("../../../../../assets/svg/ragondin.svg?url")}
+              alt="illustration ragondin"
+            />
           </picture>
         </div>
         <div className="service-card_content">

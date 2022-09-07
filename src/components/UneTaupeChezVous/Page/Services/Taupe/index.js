@@ -10,10 +10,13 @@ function Taupe() {
       <div className="service-card">
         <div className="service-card_img">
           <picture>
-            <source srcSet={TaupeWebp} type="image/webp" />
+            <source
+              srcSet={require("../../../../../assets/webp/taupe.webp")}
+              type="image/webp"
+            />
             <img
               imagesizes="(max-width: 100%) 100%"
-              src={TaupeSvg}
+              src={require("../../../../../assets/svg/taupe.svg?url")}
               alt="illustration de taupe"
               title="illustration de taupe"
             />

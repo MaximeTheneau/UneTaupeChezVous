@@ -1,10 +1,12 @@
 // == Import
-import { useEffect } from "react";
+import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { imgStickyFalse, toogleNavbar, toogleNavbarSubtitle } from "../../action/header";
-import Logo from "../../assets/svg/logo-une-taupe-chez-vous.svg?url";
-import LogoWebp from "../../assets/webp/logo-une-taupe-chez-vous.webp";
+import {
+  imgStickyFalse,
+  toogleNavbar,
+  toogleNavbarSubtitle,
+} from "../../action/header";
 import "./styles.css";
 
 // == Composant
@@ -12,7 +14,7 @@ function Header() {
   const dispatch = useDispatch();
   const toggleNav = useSelector((state) => state.header.toogleNavbar);
   const imgSticky = useSelector((state) => state.header.imgSticky);
-
+  const headerRef = useRef(0);
   const toggleNavSubtitle = useSelector(
     (state) => state.header.toogleNavbarSubtitle
   );
@@ -20,9 +22,7 @@ function Header() {
     dispatch(toogleNavbarSubtitle());
     dispatch(toogleNavbar());
   };
-  useEffect(() => {
-    console.log(window.scrollY);
-}, []);
+
   return (
     <>
       {imgSticky ? (
@@ -34,20 +34,24 @@ function Header() {
           <img
             src={require("../../assets/svg/illustration-jardin-taupe.svg?url")}
             alt="Illustration d'une taupe dans un jardin avec une tondeuse"
-            title="illustration Une taupe chez vous" />
+            title="illustration Une taupe chez vous"
+          />
         </picture>
       ) : (
         ""
       )}
-      <header  className="header">
+      <header  className="header" ref={headerRef}>
         {toggleNav ? (
           <div className="header-navbar-toggle">
             <div className="header-logo">
               <NavLink to="/">
                 <picture>
-                  <source srcSet={LogoWebp} type="image/webp" />
+                  <source
+                    srcSet={require("../../assets/webp/logo-une-taupe-chez-vous.webp")}
+                    type="image/webp"
+                  />
                   <img
-                    src={Logo}
+                    src={require("../../assets/svg/logo-une-taupe-chez-vous.svg?url")}
                     alt="Logo Une Taupe Chez Vous"
                     title="Logo Une taupe chez vous"
                   />
@@ -72,9 +76,12 @@ function Header() {
               <div className="header-logo">
                 <NavLink to="/">
                   <picture>
-                    <source srcSet={LogoWebp} type="image/webp" />
+                    <source
+                      srcSet={require("../../assets/webp/logo-une-taupe-chez-vous.webp")}
+                      type="image/webp"
+                    />
                     <img
-                      src={Logo}
+                      src={require("../../assets/svg/logo-une-taupe-chez-vous.svg?url")}
                       alt="Logo Une Taupe Chez Vous"
                       title="Logo Une taupe chez vous"
                     />

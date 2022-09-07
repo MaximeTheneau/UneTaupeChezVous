@@ -15,39 +15,45 @@ import { useSelector } from "react-redux";
 import ModalBoxError from "../ModalError";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { imgSticky, imgStickyFalse } from "../../action/header";
+import { imgSticky, imgStickyFalse, spinnerHome } from "../../action/header";
+import Spinner from "../Spinner";
 
 function UneTaupeChezVous() {
   const dispatch = useDispatch();
   const toggleModal = useSelector((state) => state.modalBox.toggleModal);
+  const spinnerHomeLoader = useSelector((state) => state.header.spinnerHome);
   const location = useLocation();
   useEffect(() => {
     const locationPath = location.pathname === "/";
     locationPath ? dispatch(imgSticky()) : dispatch(imgStickyFalse());
-    setTimeout(() => {
-      dispatch(imgStickyFalse());
-    }, 3000);
   }, [location]);
-
 
 
   return (
     <>
-      <Header />
-      <main className="main">
-        <Routes >
-          <Route path="/" element={<Home />} />
-          <Route path="/services/" element={<Services />} />
-          <Route path="/services/nuisibles/taupe" element={<Taupe />} />
-          <Route path="/services/nuisibles/ragondin" element={<Ragondin />} />
-          <Route path="/services/nuisibles/fouine" element={<Fouine />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/mentions-legal" element={<MentionsLegal />} />
-          <Route path="*" element={<ModalBoxError />} />
-        </Routes>
-        {toggleModal ? <ModalBox /> : ""}
-      </main>
-      <Footer />
+      {spinnerHomeLoader && <Spinner />}
+      {!spinnerHomeLoader && (
+        <>
+          <Header />
+          <main className="main">
+            <Routes >
+              <Route path="/" element={<Home />} />
+              <Route path="/services/" element={<Services />} />
+              <Route path="/services/nuisibles/taupe" element={<Taupe />} />
+              <Route
+                path="/services/nuisibles/ragondin"
+                element={<Ragondin />}
+              />
+              <Route path="/services/nuisibles/fouine" element={<Fouine />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/mentions-legal" element={<MentionsLegal />} />
+              <Route path="*" element={<ModalBoxError />} />
+            </Routes>
+            {toggleModal ? <ModalBox /> : ""}
+          </main>
+          <Footer />
+        </>
+      )}
     </>
   );
 }

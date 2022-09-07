@@ -11,8 +11,14 @@ function Fouine() {
       <div className="service-card">
         <div className="service-card_img">
           <picture>
-            <source srcSet={FouineWebp} type="image/svg" />
-            <img src={FouineSvg} alt="illustration fouine" />
+            <source
+              srcSet={require("../../../../../assets/webp/fouine.webp")}
+              type="image/svg"
+            />
+            <img
+              src={require("../../../../../assets/svg/fouine.svg?url")}
+              alt="illustration fouine"
+            />
           </picture>
         </div>
         <div className="service-card_content">
