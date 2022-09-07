@@ -23,10 +23,10 @@ function Contact() {
     }
     emailjs
       .sendForm(
-        "service_{ID_SERVICE}",
-        "template_{TEMPLATE_SERVICE}",
+        "service_j890q4l",
+        "template_xd1r1j3",
         evt.target,
-        "{KEY_PUBLIC}"
+        "1O8Ob4TeUeGNU_xaz"
       )
       .then(
         (result) => {
