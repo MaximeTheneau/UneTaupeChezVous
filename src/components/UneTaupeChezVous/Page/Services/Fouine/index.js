@@ -1,7 +1,4 @@
 // == Import
-import FouineSvg from "../../../../../assets/svg/fouine.svg?url";
-import FouineWebp from "../../../../../assets/webp/fouine.webp";
-
 
 // == Composant
 function Fouine() {
