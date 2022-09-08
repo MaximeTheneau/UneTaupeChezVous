@@ -17,7 +17,7 @@ function Contact() {
     console.log(evt.target);
     {
       /* 
-      install emailjs-com 
+      emailjs-com 
       ----> https://dashboard.emailjs.com <----
       */
     }
