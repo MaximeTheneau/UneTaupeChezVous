@@ -34,8 +34,8 @@ function Home() {
         <img
           src={require("../../../../assets/svg/logo-une-taupe-chez-vous.svg?url")}
           alt="Logo Une Taupe Chez Vous"
-          className="home-logo"
           title="Logo Une taupe chez vous"
+          className="logo"
         />
       </picture>
       <h1 className="home-title">Une Taupe Chez vous</h1>

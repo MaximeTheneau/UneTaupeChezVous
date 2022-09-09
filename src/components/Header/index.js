@@ -79,6 +79,7 @@ function Header() {
                     src={require("../../assets/svg/logo-une-taupe-chez-vous.svg?url")}
                     alt="Logo Une Taupe Chez Vous"
                     title="Logo Une taupe chez vous"
+                    className="logo"
                   />
                 </picture>
               </NavLink>
