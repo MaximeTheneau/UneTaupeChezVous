@@ -2,9 +2,21 @@
 import "./styles.css";
 import { Link } from "react-router-dom";
 import MetaTags from "react-meta-tags";
+import { useEffect } from "react";
+import { imgSticky, imgStickyFalse } from "../../../../action/header";
+import { useDispatch } from "react-redux";
 
 // == Composant
 function Home() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (location.pathname === "/") {
+      dispatch(imgSticky());
+    } else {
+      dispatch(imgStickyFalse());
+    }
+  }, []);
+
   return (
     <>
       <MetaTags>
@@ -22,8 +34,8 @@ function Home() {
         <img
           src={require("../../../../assets/svg/logo-une-taupe-chez-vous.svg?url")}
           alt="Logo Une Taupe Chez Vous"
-          className="home-logo"
           title="Logo Une taupe chez vous"
+          className="logo"
         />
       </picture>
       <h1 className="home-title">Une Taupe Chez vous</h1>

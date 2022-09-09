@@ -51,6 +51,11 @@ i {
 .icon-angle:before {
   content: "\e930";
 }
+.icon-angle-90:before {
+  content: "\e930";
+  transform: rotate(90deg) !important;
+  display: inline-block;
+}
 .icon-navbar:before {
   content: "\e931";
 }
