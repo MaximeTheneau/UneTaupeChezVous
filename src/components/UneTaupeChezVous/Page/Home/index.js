@@ -2,9 +2,21 @@
 import "./styles.css";
 import { Link } from "react-router-dom";
 import MetaTags from "react-meta-tags";
+import { useEffect } from "react";
+import { imgSticky, imgStickyFalse } from "../../../../action/header";
+import { useDispatch } from "react-redux";
 
 // == Composant
 function Home() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (location.pathname === "/") {
+      dispatch(imgSticky());
+    } else {
+      dispatch(imgStickyFalse());
+    }
+  }, []);
+
   return (
     <>
       <MetaTags>

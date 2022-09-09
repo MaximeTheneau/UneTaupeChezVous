@@ -9,7 +9,7 @@ import {
 export const initialState = {
   toogleNavbar: true,
   toogleNavbarSubtitle: true,
-  imgSticky: null,
+  imgSticky: true,
   spinnerHome: false,
 };
 
@@ -19,11 +19,6 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         toogleNavbar: !state.toogleNavbar,
-      };
-    case IMG_STICKY:
-      return {
-        ...state,
-        imgSticky: !state.imgSticky,
       };
     case IMG_STICKY:
       return {

@@ -1,7 +1,6 @@
 // == Import
-import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   imgStickyFalse,
   toogleNavbar,
@@ -9,12 +8,12 @@ import {
 } from "../../action/header";
 import "./styles.css";
 
+
 // == Composant
 function Header() {
   const dispatch = useDispatch();
   const toggleNav = useSelector((state) => state.header.toogleNavbar);
   const imgSticky = useSelector((state) => state.header.imgSticky);
-  const headerRef = useRef(0);
   const toggleNavSubtitle = useSelector(
     (state) => state.header.toogleNavbarSubtitle
   );
@@ -22,29 +21,55 @@ function Header() {
     dispatch(toogleNavbarSubtitle());
     dispatch(toogleNavbar());
   };
-
   return (
     <>
       {imgSticky ? (
-        <picture>
-          <source
-            srcSet={require("../../assets/webp/illustration-jardin-taupe.webp")}
-            type="image/webp"
-          />
-          <img
-            src={require("../../assets/svg/illustration-jardin-taupe.svg?url")}
-            alt="Illustration d'une taupe dans un jardin avec une tondeuse"
-            title="illustration Une taupe chez vous"
-          />
-        </picture>
+        <div className="header-sticky">
+          <picture className="header-sticky_img">
+            <source
+              srcSet={require("../../assets/webp/illustration-jardin-taupe-small.webp")}
+              media="(max-width: 720px)"
+              type="image/webp"
+            />
+            <source
+              srcSet={require("../../assets/webp/illustration-jardin-taupe-middle.webp")}
+              media="(max-width: 1024px)"
+              type="image/webp"
+            />
+            <source
+              srcSet={require("../../assets/webp/illustration-jardin-taupe-large.webp")}
+              media="(max-width: 2000px)"
+              type="image/webp"
+            />
+            <img
+              src={require("../../assets/svg/illustration-jardin-taupe.svg?url")}
+              alt="Illustration d'une taupe dans un jardin avec une tondeuse"
+              title="illustration Une taupe chez vous"
+            />
+          </picture>
+          <div
+            className="header-sticky-content"
+            onClick={() => dispatch(imgStickyFalse())}
+          >
+            <a href="#bienvenue">
+              <i className="icon-angle-90" />
+            </a>
+          </div>
+        </div>
       ) : (
         ""
       )}
-      <header  className="header" ref={headerRef}>
+      <header className="header" id="bienvenue">
         {toggleNav ? (
           <div className="header-navbar-toggle">
             <div className="header-logo">
-              <NavLink to="/">
+              <NavLink
+                to="/"
+                onClick={() => {
+                  dispatch(toogleNavbar());
+                  dispatch(imgStickyFalse());
+                }}
+              >
                 <picture>
                   <source
                     srcSet={require("../../assets/webp/logo-une-taupe-chez-vous.webp")}
@@ -60,7 +85,6 @@ function Header() {
             </div>
             <div className="header-button_close">
               <button
-                className=""
                 onClick={() => {
                   dispatch(toogleNavbar());
                   dispatch(imgStickyFalse());
@@ -107,7 +131,7 @@ function Header() {
                   {toggleNavSubtitle ? (
                     <i className="icon-angle" />
                   ) : (
-                    <i className="icon-angle rotate-90" />
+                    <i className="icon-angle-90" />
                   )}
                 </div>
                 {toggleNavSubtitle ? (

@@ -13,21 +13,11 @@ import Fouine from "./Page/Services/Fouine";
 import ModalBox from "../ModalBox";
 import { useSelector } from "react-redux";
 import ModalBoxError from "../ModalError";
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { imgSticky, imgStickyFalse, spinnerHome } from "../../action/header";
 import Spinner from "../Spinner";
 
 function UneTaupeChezVous() {
-  const dispatch = useDispatch();
   const toggleModal = useSelector((state) => state.modalBox.toggleModal);
   const spinnerHomeLoader = useSelector((state) => state.header.spinnerHome);
-  const location = useLocation();
-  useEffect(() => {
-    const locationPath = location.pathname === "/";
-    locationPath ? dispatch(imgSticky()) : dispatch(imgStickyFalse());
-  }, [location]);
-
 
   return (
     <>
