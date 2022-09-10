@@ -1,6 +1,9 @@
-<Directory "${SERVER_ROOT}/web_dir">
-    Options -MultiViews
+<IfModule mod_rewrite.c>
     RewriteEngine On
+    RewriteBase /subdirectory
+    RewriteRule ^index\.html$ - [L]
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.html [QSA,L]
-</Directory/>
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-l
+    RewriteRule . /index.html [L]
+</IfModule>
