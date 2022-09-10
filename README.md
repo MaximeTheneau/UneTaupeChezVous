@@ -44,7 +44,6 @@ https://dashboard.emailjs.com
 - [React-Redux](https://react-redux.js.org/)
 - [Email.js](https://www.emailjs.com/)
 - [SVGR](https://react-svgr.com/)
-- [image-webpack-loader](https://react-svgr.com/)
 
 ### Wireframe
 

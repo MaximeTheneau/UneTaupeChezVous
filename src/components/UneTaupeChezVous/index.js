@@ -21,29 +21,21 @@ function UneTaupeChezVous() {
 
   return (
     <>
-      {spinnerHomeLoader && <Spinner />}
-      {!spinnerHomeLoader && (
-        <>
-          <Header />
-          <main className="main">
-            <Routes >
-              <Route path="/" element={<Home />} />
-              <Route path="/services/" element={<Services />} />
-              <Route path="/services/nuisibles/taupe" element={<Taupe />} />
-              <Route
-                path="/services/nuisibles/ragondin"
-                element={<Ragondin />}
-              />
-              <Route path="/services/nuisibles/fouine" element={<Fouine />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/mentions-legal" element={<MentionsLegal />} />
-              <Route path="*" element={<ModalBoxError />} />
-            </Routes>
-            {toggleModal ? <ModalBox /> : ""}
-          </main>
-          <Footer />
-        </>
-      )}
+      <Header />
+      <main className="main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services/" element={<Services />} />
+          <Route path="/services/nuisibles/taupe" element={<Taupe />} />
+          <Route path="/services/nuisibles/ragondin" element={<Ragondin />} />
+          <Route path="/services/nuisibles/fouine" element={<Fouine />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/mentions-legal" element={<MentionsLegal />} />
+          <Route path="*" element={<ModalBoxError />} />
+        </Routes>
+        {toggleModal ? <ModalBox /> : ""}
+      </main>
+      <Footer />
     </>
   );
 }
