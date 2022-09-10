@@ -26,6 +26,7 @@ function Footer() {
           href="https://github.com/MaximeTheneau"
           target="blank"
           className="footer-author_signature"
+         name="lien vers le github de Maxime Theneau"
         >
           <i className="theneau-maxime" />
         </a>

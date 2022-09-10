@@ -66,13 +66,10 @@ module.exports = {
       {
         test: /\.svg$/i,
         type: 'asset',
+        generator: {
+          filename: 'images/[hash][ext][query]'
+        },
         resourceQuery: /url/, // *.svg?url
-      },
-      {
-        test: /\.svg$/i,
-        issuer: /\.[jt]sx?$/,
-        resourceQuery: { not: [/url/] }, // exclude react component if *.svg?url
-        use: '@svgr/webpack', 
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/i,

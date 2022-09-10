@@ -7,7 +7,7 @@
     border-bottom: 0.1rem solid vars.$color-primary;
   }
   &-map_img {
-    width: 31%;
+    width: 29%;
     justify-content: space-around
   }
   &-card{
@@ -39,8 +39,8 @@
   }
   &-map {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     & a{
       font-weight: bold;
       &:hover{
@@ -68,6 +68,11 @@
           width: 47% !important;
 
         }
+    }
+    &-map{
+      &_description{
+        width: 70%;
+      }
     }
   }
 }

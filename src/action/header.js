@@ -27,10 +27,3 @@ export function imgStickyFalse() {
     type: IMG_STICKY_FALSE,
   };
 }
-export const SPINNER_HOME = "SPINNER_HOME";
-
-export function spinnerHome() {
-  return {
-    type: SPINNER_HOME,
-  };
-}

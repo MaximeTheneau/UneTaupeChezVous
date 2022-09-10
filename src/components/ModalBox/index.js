@@ -29,7 +29,7 @@ function ModalBox() {
               type="image/webp"
             />
             <img
-              src={require("../../assets/svg/card-illustration.svg")}
+              src={require("../../assets/svg/card-illustration.svg?url")}
               alt="Illustration cards"
             />
           </picture>
