@@ -12,6 +12,6 @@ const rootReactElement = (
     </BrowserRouter>
   </Provider>
 );
-
+const container = document.getElementById("root");
 const root = createRoot(document.getElementById("root"));
 root.render(rootReactElement);
