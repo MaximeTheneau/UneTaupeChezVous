@@ -1,10 +1,11 @@
 {
   "extends": "airbnb",
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "env": {
     "browser": true
   },
   "rules": {
+    "quotes": [2, "double", "avoid-escape"],
     "brace-style": ["error", "stroustrup"],
     "no-param-reassign": [
       "error",
@@ -31,7 +32,11 @@
     "react/destructuring-assignment": "warn",
     "react/no-unescaped-entities": "off",
     "react/jsx-props-no-spreading": "off",
-    "react/state-in-constructor": "off"
+    "react/state-in-constructor": "off",
+    "func-names": "off",
+    "object-shorthand": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
   },
   "settings": {
     "import/resolver": {
@@ -44,4 +49,5 @@
       }
     }
   }
+
 }

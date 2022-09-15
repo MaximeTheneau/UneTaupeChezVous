@@ -1,10 +1,16 @@
+<p align="center">
+<img src="./src/assets/webp/logo-une-taupe-chez-vous.webp" width="12%" >
+</p>
+
 # Une Taupe Chez Vous Website
 
  [Demo](https://unetaupechezvous.fr/)
 
 Site web vitrine réaliser en "Mobile-First" avec React.Js.
 
-Les images sont aux formats SVG et WEBP.
+Police d'icones créer par Theneau Maxime.
+
+Illustration créer par Theneau Maxime aux formats SVG et WEBP.
 
 SEO optimisé.
 
@@ -19,17 +25,28 @@ SEO optimisé.
 
 ### Installation
 
-Installer les dépendances avec "yarn" :
 
-    $ yarn 
+Scripts
+-------
 
-Lancer le serveur
+```sh
+# Avec yarn
+yarn {script}
 
-    $ yarn start
+# Avec npm
+npm run {script}
+```
 
-Builder le projet 
+- `start`: Lance le serveur de développement.
+- `build`: Lance la construction de la version de production.
+- `lint`: Affiche les erreurs dans le code.
+- `lint:fix`: Tente de corriger certaines des erreurs dans le code.
+- `clean`: Supprime le dossier `dist/`.
+- `clean:all`: Supprime `dist/`, `node_modules/` et les fichiers `lock`.
 
-    $ yarn build
+---
+
+
 
 Dupliquer le dossier d'exemple "Contact-Example" (./src/components/UneTaupeChezVous/Page/Contact-Example) remplacer le nom du dossier par "Contact" et changer les valeurs "service_{ID_SERVICE}", "template_{TEMPLATE_SERVICE}" et "{KEY_PUBLIC}" par vos identifiants.
 
@@ -43,7 +60,6 @@ https://dashboard.emailjs.com
 - [react-meta-tag](https://www.npmjs.com/package/react-meta-tags)
 - [React-Redux](https://react-redux.js.org/)
 - [Email.js](https://www.emailjs.com/)
-- [SVGR](https://react-svgr.com/)
 
 ### Wireframe
 
