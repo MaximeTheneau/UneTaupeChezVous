@@ -5,6 +5,7 @@
     background: #e9ece8;
     padding: 1rem;
     margin: 2rem 0 0;
+    font-size: 1.5rem;
     & ul{
         display: flex;
         flex-direction: column;
@@ -26,8 +27,5 @@
             display: inline-block;
         }
     }
-    & a:hover{
-        color: vars.$green;
-        transition: color 0.5s ease-in-out;
-    }
+
 }

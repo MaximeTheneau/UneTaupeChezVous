@@ -21,7 +21,7 @@ function Home() {
 
 
   return (
-    <>
+    <div>
       {spinnerLoad ? (<Spinner /> ) : (
         <>
         <MetaTags>
@@ -129,7 +129,7 @@ function Home() {
                 <div className="home-list-services_list_img">
                   <picture>
                     <source
-                      srcset={`${require("../../../../assets/webp/taupe.webp")} 1x`}
+                      srcSet={`${require("../../../../assets/webp/taupe.webp")} 1x`}
 
                       type="image/webp"
                     />
@@ -204,7 +204,7 @@ function Home() {
         </div>
         </>
         )}
-    </>
+    </div>
   );
 }
 

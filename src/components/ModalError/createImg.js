@@ -1,6 +1,6 @@
 // == Import
-
 import "./styles.css";
+
 
 // == Composant
 function CreateImg() {

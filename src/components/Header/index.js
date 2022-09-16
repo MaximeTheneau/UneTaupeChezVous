@@ -8,13 +8,14 @@ import {
   toogleNavbarSubtitle,
 } from "../../action/header";
 
-// == Img
+// == Import Img
 import ImgSmallJardin from "../../assets/webp/illustration-jardin-taupe-small.webp";
 import ImgMiddleJardin from "../../assets/webp/illustration-jardin-taupe-middle.webp";
 import ImgLargeJardin from "../../assets/webp/illustration-jardin-taupe-large.webp";
 import ImgJardin from "../../assets/svg/illustration-jardin-taupe.svg";
 import ImgLogo from "../../assets/svg/logo-une-taupe-chez-vous.svg";
 import ImgLogoWebp from "../../assets/webp/logo-une-taupe-chez-vous.webp";
+
 // == Composant
 function Header() {
   const dispatch = useDispatch();

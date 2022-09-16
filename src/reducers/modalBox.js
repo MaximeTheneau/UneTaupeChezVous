@@ -23,6 +23,7 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         toggleModalError: !state.toggleModalError,
+        numberImg: false,
       };
     case NUMBER_IMG:
       return {

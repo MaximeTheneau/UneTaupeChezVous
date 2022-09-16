@@ -23,7 +23,7 @@ function Taupe() {
         </div>
         <div className="service-card_content">
           <p>
-            Les <em>taupes</em> jouent un rôle dans l'écosystème.
+            Les taupes jouent un rôle dans l'écosystème.
             <br />
             L'objectif est de limiter la prolifération des taupes, dans votre
             jardin, terrain de foot, piste d'aérodrome, golf, etc...
