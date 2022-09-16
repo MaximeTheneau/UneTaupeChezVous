@@ -2,7 +2,7 @@
   "extends": "airbnb",
   "parser": "@babel/eslint-parser",
   "env": {
-    "browser": true
+    "browser": true,
   },
   "rules": {
     "quotes": [2, "double", "avoid-escape"],
