@@ -29,12 +29,12 @@ function Fouine() {
           </p>
           <h2>Utile ou nuisible ?</h2>
           <p>
-            La fouine est un animal utile, elle est un prédateur chassant les de
+            La fouine est un animal utile, elle est un prédateur chassant de
             nombreux rongeurs.
           </p>
           <h2>Comment se débarrasser d'une fouine dans le grenier ?</h2>
           <p>
-            Une Taupes chez vous vous propose des solutions naturelles et sans
+            <em>Une Taupe Chez Vous</em> vous propose des solutions naturelles et sans
             danger pour l'environnement pour lutter contre la fouine avec des
             pièges sans danger pour vos animaux de compagnie, sans produits
             chimiques chimiques ou nocifs pour l'environnement.

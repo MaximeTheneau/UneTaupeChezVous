@@ -64,19 +64,12 @@ module.exports = {
       },
       // Images
       {
-        test: /\.svg$/i,
-        type: 'asset',
-        generator: {
-          filename: 'images/[hash][ext][query]'
-        },
-        resourceQuery: /url/, // *.svg?url
-      },
-      {
-        test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/i,
+        test: /\.(?:ico|gif|png|jpg|jpeg|webp|svg)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'images/[hash][ext][query]'
-        }
+          filename: '[name][ext]'
+        },
+
       },
       // Fonts and SVGs
       {

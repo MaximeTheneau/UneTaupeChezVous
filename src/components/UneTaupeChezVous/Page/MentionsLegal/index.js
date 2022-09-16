@@ -7,13 +7,13 @@ function MentionsLegal() {
   return (
     <div className="mentions">
       <MetaTags>
-        <title>Mention légal</title>
+        <title>Mentions légales</title>
         <meta
           name="description"
           content="Une Taupe Chez Vous, 71 rue Marie Curie, 27780 Garrennes Sur Eure, 0232264958, N° SIRET 39338032400029"
         />
       </MetaTags>
-      <h1>Mentions-légal</h1>
+      <h1>Mentions légales</h1>
       <ul>
         <li className="list-mentions">
           <i className="icon-location"/>

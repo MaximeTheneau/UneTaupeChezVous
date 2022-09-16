@@ -32,10 +32,10 @@ function Services() {
                 />
               </picture>
             </div>
-            <h3 className="home-card-service_title">Taupes</h3>
+            <h3 className="home-card-service_title">Taupe</h3>
           </Link>
         </div>
-        {/*--home-service--*/}
+        {/* --home-service-- */}
         <div className="home-card-service">
           <Link to="/services/nuisibles/fouine">
             <div className="home-list-services_list_img">
@@ -50,10 +50,10 @@ function Services() {
                 />
                 </picture>
             </div>
-            <h3 className="home-card-service_title">Fouines</h3>
+            <h3 className="home-card-service_title">Fouine</h3>
           </Link>
         </div>
-        {/*--home-service--*/}
+        {/* --home-service--*/}
         <div className="home-card-service">
           <Link to="/services/nuisibles/ragondin">
             <div className="home-services_list_img">
@@ -68,7 +68,7 @@ function Services() {
                 />
               </picture>
             </div>
-            <h3 className="home-card-service_title">Ragondins</h3>
+            <h3 className="home-card-service_title">Ragondin</h3>
         </Link>
         </div>
       </div>

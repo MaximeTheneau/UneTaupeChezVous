@@ -4,6 +4,7 @@ import emailjs from "emailjs-com";
 
 import { useDispatch, useSelector } from "react-redux";
 import { toggleModal } from "../../../../action/modalBox";
+import { contactForm } from "../../../../action/contact";
 
 // == Composant
 function Contact() {
@@ -15,9 +16,10 @@ function Contact() {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     console.log(evt.target);
+    // eslint-disable-next-line no-lone-blocks
     {
-      /* 
-      emailjs-com 
+    /*
+      emailjs-com
       ----> https://dashboard.emailjs.com <----
       */
     }
@@ -26,7 +28,7 @@ function Contact() {
         "service_{ID_SERVICE}",
         "template_{TEMPLATE_SERVICE}",
         evt.target,
-        "{KEY_PUBLIC}"
+        "{KEY_PUBLIC}",
       )
       .then(
         (result) => {
@@ -81,15 +83,13 @@ function Contact() {
             name="message"
             className="contact-form-input"
             value={messageValue}
-            onChange={(evt) =>
-              dispatch(contactForm(evt.target.value, "message"))
-            }
+            onChange={(evt) => dispatch(contactForm(evt.target.value, "message"))}
             required
           />
         </label>
         <div className="contact-form_button">
           <button type="submit">
-            <i className="icon-submit" value="send"></i>
+            <i className="icon-submit" value="send" />
             Envoyer
           </button>
         </div>

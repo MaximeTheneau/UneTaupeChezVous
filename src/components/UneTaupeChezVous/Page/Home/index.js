@@ -45,9 +45,9 @@ function Home() {
           />
         </picture>
         <h1 className="home-title">Une Taupe Chez vous</h1>
-        <h2 className="home-subtitle">Artisans Maitre Taupiers piégeurs</h2>
+        <h2 className="home-subtitle">Artisan Maitre Taupier piégeur</h2>
         <p className="home-paragrah">
-          nous mettons à vote service plus de 25 ans d'expérience dans la
+          Nous mettons à vrote service plus de 25 ans d'expérience dans la
           destruction des <Link to="/services/nuisibles/taupe">taupes</Link>,
           <Link to="/services/nuisibles/fouines"> fouines</Link>,
           <Link to="/services/nuisibles/ragondin"> ragondins</Link> et autres
@@ -142,7 +142,7 @@ function Home() {
                     />
                   </picture>
                 </div>
-                <h3 className="home-card-service_title">Taupes</h3>
+                <h3 className="home-card-service_title">Taupe</h3>
               </Link>
             </div>
             {/*--home-service--*/}
@@ -162,7 +162,7 @@ function Home() {
                     />
                   </picture>
                 </div>
-                <h3 className="home-card-service_title">Fouines</h3>
+                <h3 className="home-card-service_title">Fouine</h3>
               </Link>
             </div>
             {/*--home-service--*/}
@@ -176,7 +176,7 @@ function Home() {
                   height="100%" />
                   </picture>
                 </div>
-                <h3 className="home-card-service_title">Ragondins</h3>
+                <h3 className="home-card-service_title">Ragondin</h3>
             </Link>
             </div>
           </div>
@@ -186,7 +186,7 @@ function Home() {
         <div className="home-map">
           <div className="home-map_description">
             <div>
-              Pour tous demande de devis ou demande de renseignement
+              Pour toute demande de devis ou demande de renseignement
               <Link to="/contact"> contactez-nous</Link>
             </div>
             <div>

@@ -17,16 +17,16 @@ function Footer() {
           <NavLink to="/contact"> Contact</NavLink>
         </li>
         <li className="footer-link">
-          <NavLink to="/mentions-legal">Mentions-légal</NavLink>
+          <NavLink to="/mentions-legal">Mentions légales</NavLink>
         </li>
       </ul>
       <div className="footer-author">
-        Site réaliser par
+        Site réalisé par
         <a
           href="https://github.com/MaximeTheneau"
           target="blank"
           className="footer-author_signature"
-         name="lien vers le github de Maxime Theneau"
+          name="lien vers le github de Maxime Theneau"
         >
           <i className="theneau-maxime" />
         </a>
