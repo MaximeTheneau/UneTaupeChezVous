@@ -22,3 +22,9 @@
     padding-left: 1rem;
   }
 }
+@media screen and (min-width: 720px){
+  .mentions{
+    width: 70%;
+    margin: auto;
+  }
+}

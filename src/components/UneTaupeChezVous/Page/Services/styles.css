@@ -1,9 +1,22 @@
-.service{
-    &-card{
-        &_content{
-            &_environment{
-                width: 30%;
-            }
+.service-card{
+  & h1,
+  & h2{
+    margin: 2rem 0 2rem 0 !important;
+  }
+    &_content{
+        &_environment{
+            width: 30%;
         }
     }
-} 
+}
+ 
+@media screen and (min-width: 720px){
+    .service{
+        &-card{
+          width: 70%;
+          margin: auto;
+        }
+    }
+}
+  
+

@@ -1,11 +1,13 @@
 // == Import
 import "./styles.css";
 import emailjs from "emailjs-com";
-
 import { useDispatch, useSelector } from "react-redux";
 import { toggleModal } from "../../../../action/modalBox";
 import { contactForm } from "../../../../action/contact";
 
+// == Import Img
+import ImgTaupeWebp from "../../../../assets/webp/illustration-taupe-vacances.webp"
+import ImgTaupe from "../../../../assets/svg/illustration-taupe-vacances.svg"
 // == Composant
 function Contact() {
   const dispatch = useDispatch();
@@ -16,10 +18,9 @@ function Contact() {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     console.log(evt.target);
-    // eslint-disable-next-line no-lone-blocks
     {
-    /*
-      emailjs-com
+      /* 
+      emailjs-com 
       ----> https://dashboard.emailjs.com <----
       */
     }
@@ -41,19 +42,22 @@ function Contact() {
       );
   };
   return (
-    <>
-      <picture>
-        <source
-          srcSet={require("../../../../assets/webp/illustration-taupe-vacances.webp")}
-          type="image/webp"
-        />
-        <img
-          src={require("../../../../assets/svg/illustration-taupe-vacances.svg?url")}
-          alt="Illustration d'une taupe dans un jardin avec une tondeuse"
-          title="illustration Une taupe chez vous"
-        />
-      </picture>
+    <div className="contact">
+      <div className="contact-img">
+        <picture>
+          <source
+            srcSet={ImgTaupeWebp}
+            type="image/webp"
+          />
+          <img
+            src={ImgTaupe}
+            alt="Illustration d'une taupe dans un jardin avec une tondeuse"
+            title="illustration Une taupe chez vous"
+          />
+        </picture>
+      </div>
       <h1>Contact</h1>
+      <h2>Formulaire</h2>
       <form className="contact-form" onSubmit={handleSubmit}>
         <label htmlFor="Name">
           <div className="contact-form_title">Nom / Prénom*</div>
@@ -92,9 +96,23 @@ function Contact() {
             <i className="icon-submit" value="send" />
             Envoyer
           </button>
+          <div className="contact-list">
+            <div className="contact-list-item">
+              <a href="tel:+33232264958">
+                <i className="icon-phone" />
+                02 32 26 49 58
+              </a>
+            </div>
+            <div className="contact-list-item">
+              <a href="mailto:laurent.theneau@unetaupechezvous.fr">
+                <i className="icon-email" />
+                laurent.theneau @ unetaupechezvous.fr
+              </a>
+            </div>
+          </div>
         </div>
       </form>
-    </>
+    </div>
   );
 }
 
